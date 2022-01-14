@@ -1,70 +1,84 @@
-# Getting Started with Create React App
+# C.A.P.E.S.
+![badge](https://img.shields.io/badge/license-MIT-brightgreen)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Description
 
-## Available Scripts
+You’re what some would call a “regular person.” You don’t have super powers, and you need a hand. Maybe your cat is stuck in a tree. Perhaps you’ve got a clogged toilet… or worse… THANOS HAS APPEARED ON YOUR PLANET AND IS EXECUTING A PLAN TO DESTROY YOUR WORLD. If this is you… then you need CAPES. Capes is an app used to summon the superhero (or superheroes) of your choosing. Login (or register), describe your emergency, and select the superheroes best suited for your needs.
 
-In the project directory, you can run:
 
-### `npm start`
+## Table of Contents
+- [Important URLs](#urls)
+- [Contributors](#contributors)
+- [Usage](#usage)
+- [User Story](#user-story)
+- [Acceptance Criteria](#acceptance-criteria)
+- [Mockup](#mock-up)
+- [Packages](#packages)
+- [Libraries](#libraries)
+- [License](#Licensing)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## URLs
+- [GitHub Repo URL](https://github.com/MrTofuuu/CAPES)
+- [Deployed Heroku Application URL](#)
+- [Wireframe](https://5bihlr.axshare.com/)
 
-### `npm test`
+## Contributors
+- [Candra Fried](github.com/candracodes)
+- [Chris Stallcup](https://github.com/MrTofuuu/)
+- [Bonnie Reed](https://github.com/bonniereed)
+- [Konner Hartman](https://github.com/konnerhartman)
+- [Misty Whitenton](https://github.com/mistwhit)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Usage
 
-### `npm run build`
+- This application can be viewed publicly from our Heroku hosted link, or... to run the app in the command line, go to the project's root directory and run `npm i && npm run seed && npm run develop` 
+- The application is then viewable from your browswer via `http://localhost:3001`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## User-Story
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+```md
+TBD
+```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Acceptance-Criteria
 
-### `npm run eject`
+```md
+TBD
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Mock-Up
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+* This application should resemble the following screenshots and/or video walk-through:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+![Screenshot 1](./client/assets/screenshot.png)
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## Packages
 
-## Learn More
+This project is created using the following packages
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+- [Node.JS](https://nodejs.org/en/)
+- [Express.JS](https://expressjs.com/)
+- [MySQL2](https://www.npmjs.com/package/mysql2)
+- [Express Handlebars](https://www.npmjs.com/package/express-handlebars)
+- [Sequelize](https://www.npmjs.com/package/sequelize)
+- [DOTENV](https://www.npmjs.com/package/dotenv)
+- [Bcrypt](https://www.npmjs.com/package/bcrypt)
+- [Express-Session](https://www.npmjs.com/package/express-session)
+- [Connect Session](https://www.npmjs.com/package/connect-session-sequelize)
+- [Express Validator](https://express-validator.github.io/docs/)
+- [MySQL Database Client for VSCode](https://github.com/cweijan/vscode-database-client)
+- [Morgan](https://github.com/expressjs/morgan)
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Libraries
 
-### Code Splitting
+This project is created using the following libraries
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+- [Bootstrap](https://getbootstrap.com/)
+- [jQuery](https://jquery.com/)
 
-### Analyzing the Bundle Size
+## Licensing
+The project is made possible with the following licensing:
+- [MIT](license.txt)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
 
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
