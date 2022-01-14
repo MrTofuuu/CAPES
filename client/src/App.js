@@ -6,6 +6,7 @@ import Matchup from './pages/Matchup';
 import Vote from './pages/Vote';
 import NotFound from './pages/NotFound';
 import Header from './components/Header';
+import Footer from './components/Footer';
 
 const client = new ApolloClient({
   uri: '/graphql',
@@ -34,6 +35,7 @@ function App() {
             </Route>
           </Switch>
         </div>
+      <Footer/>
       </Router>
     </ApolloProvider>
   );
