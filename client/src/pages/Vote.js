@@ -14,10 +14,10 @@ const Vote = () => {
 
   const [createVote, { error }] = useMutation(CREATE_VOTE);
 
-  const handleVote = async (techNum) => {
+  const handleVote = async (heroNum) => {
     try {
       await createVote({
-        variables: { _id: id, techNum: techNum },
+        variables: { _id: id, heroNum: heroNum },
       });
     } catch (err) {
       console.error(err);
