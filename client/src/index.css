@@ -47,6 +47,9 @@ body {
 main {
   display: block;
 }
+.capesCard {
+  border: 0 !important;
+}
 
 /*-------------------------------------------
 3. Logo
@@ -76,6 +79,13 @@ main {
 -------------------------------------------*/
 .capesJumbotron{
   background: url("../src/assets/img/background-image-home.jpg") no-repeat center center; 
+  -webkit-background-size: 100% 100%;
+  -moz-background-size: 100% 100%;
+  -o-background-size: 100% 100%;
+  background-size: 100% 100%;
+}
+.heroesJumbotron{
+  background: url("../src/assets/img/background-avengers.jpg") no-repeat center center; 
   -webkit-background-size: 100% 100%;
   -moz-background-size: 100% 100%;
   -o-background-size: 100% 100%;
