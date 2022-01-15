@@ -2,6 +2,7 @@ import React from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import { ApolloClient, ApolloProvider, InMemoryCache } from '@apollo/client';
 import Home from './pages/Home';
+import Ourheroes from './pages/OurHeroes';
 import Matchup from './pages/Matchup';
 import Vote from './pages/Vote';
 import NotFound from './pages/NotFound';
@@ -29,6 +30,9 @@ function App() {
             </Route>
             <Route exact path="/matchup/:id">
               <Vote />
+            </Route>
+            <Route exact path="/ourheroes">
+              <Ourheroes />
             </Route>
             <Route>
               <NotFound />

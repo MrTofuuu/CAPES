@@ -15,7 +15,7 @@
   "bugs": {
     "url": "https://github.com/MrTofuuu/CAPES/issues"
   },
-  "homepage": "https://github.com/MrTofuuu/CAPES#readme",
+  "homepage": "https://github.com/MrTofuuu/CAPES",
   "devDependencies": {
     "concurrently": "^5.3.0",
     "eslint": "^7.12.1",
