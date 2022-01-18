@@ -73,8 +73,35 @@ const Home = () => {
     setEmail("");
     setZipcode("");
   };
-
   // END: FORM VALIDATIONS
+
+  // Create object containing all hero details to run in a loop
+  let resultObjects = [
+    {
+      resultImage: "../assets/heroes/Antman.jpg",
+      resultAltTag: "INFO",
+      resultValue: "heroID",
+      resultName: "Hero Name"
+    },
+    {
+      resultImage: "../assets/heroes/ScarletWitch.jpg",
+      resultAltTag: "INFO",
+      resultValue: "heroID",
+      resultName: "Hero Name"
+    },
+    {
+      resultImage: "../assets/heroes/Thor.jpg",
+      resultAltTag: "INFO",
+      resultValue: "heroID",
+      resultName: "Hero Name"
+    },
+    {
+      resultImage: "../assets/heroes/Vision.jpg",
+      resultAltTag: "INFO",
+      resultValue: "heroID",
+      resultName: "Hero Name"
+    }
+  ];
 
   return (
     <>
@@ -283,6 +310,56 @@ const Home = () => {
           {/* end: row */}
         </div>
         {/* end: report your emergency form */}
+      </>
+
+      <>
+        {/* RESULTS FORM*/}
+        <div
+          id="results-component"
+          className="px-4 py-5 my-5 blueBackground text-white"
+        >
+          <h1 className="display-5 fw-bold">Results</h1>
+          <p>Based on your description, we recommend the following C.A.P.E.S. hero to suit your emergency. Make your selection, and summon your preferred hero.</p>
+          {/* start: row */}
+          <div className="row">
+            {/* FORM*/}
+            <div>
+              <form>
+                {/* IMAGES AND HERO DETAILS */}
+                <div className="row">
+                  {resultObjects.map((card) => (
+                    <div className="col-lg-3">
+                      <img src={card.resultImage} className="card-img-top mb-3" alt={card.resultAltTag} />
+                      <div className="form-check mb-3">
+                        <input className="form-check-input" type="checkbox" value={card.resultValue} id={card.resultValue} />
+                        <label for={card.resultValue}>
+                        {card.resultName}
+                        </label>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+                {/* CALL-TO-ACTION BUTTONS */}
+                <div className="row">
+                  <div className="col-lg-3">
+                    <button type="button" className="btn capes-btn green-btn mb-3 me-3">
+                      Summon Your Hero!
+                    </button>
+                    <HLink to="/#report-emergency">
+                      <button type="button" className="btn capes-btn btn-light mb-3">
+                        Report A New Incident
+                      </button>
+                    </HLink>
+                
+                  </div>
+                </div>
+
+              </form>
+            </div>
+          </div>
+          {/* end: row */}
+        </div>
+        {/* end: results form */}
       </>
 
       <>
