@@ -18,12 +18,20 @@
   --white: #ffffff;
   --gray: #555555;
   --lightGray:rgba(255,255,255,.55);
+  --blue: #016FA0;
+  --green: #95F204;
 }
 .redText {
   color: var(--red);
 }
 .redBackground {
   background-color: var(--red);
+}
+.blueBackground {
+  background-color: var(--blue);
+}
+.blueText {
+  color:var(--blue) !important;
 }
 .mt-100 {
   margin-top:100px;
@@ -50,7 +58,11 @@ main {
 .capesCard {
   border: 0 !important;
 }
-
+.summonsRow {
+  border-bottom: 2px solid #dedede;
+  padding-bottom: 20px;
+  padding-top: 20px;
+}
 /*-------------------------------------------
 3. Logo
 -------------------------------------------*/
@@ -91,6 +103,10 @@ main {
   -o-background-size: 100% 100%;
   background-size: 100% 100%;
 }
+.userName {
+  font-style: italic;
+  font-weight: lighter;
+}
 
 /*-------------------------------------------
 6. Buttons
@@ -113,4 +129,11 @@ a {
   background-color: var(--gray) !important;
   color: var(--white) !important;
   text-decoration: underline;
+}
+.green-btn {
+  background-color: var(--green) !important;
+  cursor: pointer;
+}
+.grayLink {
+  color: var(--lightGray);
 }
