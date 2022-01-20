@@ -1,6 +1,16 @@
 [
   {
-    "name": "Joe the Plumber",
+    "name": "Chris' Dad",
+    "severity":"1",
+    "image":"#"
+  },
+  {
+    "name": "Candra's Dad",
+    "severity":"1",
+    "image":"#"
+  },
+  {
+    "name": "Misty's Dad",
     "severity":"1",
     "image":"#"
   },
@@ -10,17 +20,7 @@
     "image":"#"
   },
   {
-    "name": "Mystery Men",
-    "severity":"1",
-    "image":"#"
-  },
-  {
-    "name": "Korg",
-    "severity":"1",
-    "image":"#"
-  },
-  {
-    "name": "Squirrel Girl",
+    "name": "Bonnie's Dad",
     "severity":"1",
     "image":"#"
   },
@@ -45,12 +45,12 @@
     "image":"#"
   },
   {
-    "name": "Captain America",
+    "name": "Jessica Jones",
     "severity":"2",
     "image":"#"
   },
   {
-    "name": "Jessica Jones",
+    "name": "Loki",
     "severity":"3",
     "image":"#"
   },
@@ -85,7 +85,7 @@
     "image":"#"
   },
   {
-    "name": "",
+    "name": "Captain America",
     "severity":"4",
     "image":"#"
   },
@@ -95,7 +95,7 @@
     "image":"#"
   },
   {
-    "name": "Handlebars.js",
+    "name": "Vision",
     "severity":"4",
     "image":"#"
   },
