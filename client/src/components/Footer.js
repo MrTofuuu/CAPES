@@ -1,11 +1,9 @@
 import React from "react";
-import { Link } from "react-router-dom";
-import { HashLink as HLink } from "react-router-hash-link";
-// import logoWhite from "../assets/img/logo-white.png";
 
+// CREATE FOOTER COMPONENT
 function Footer() {
   return (
-    <footer className="text-muted py-5 bg-dark">
+    <footer className="text-muted py-5 bg-dark capes-footer">
       <div className="container">
         <div className="row">
           {/* COLUMN 1 */}
@@ -33,7 +31,9 @@ function Footer() {
             <h4 className="text-white">Plans for future development</h4>
             <p className="mb-0">
               <ul className="my-3 mb-3">
-                <li>Implement stripe "donation" logic</li>
+                <li>Implementing stripe "donation" logic</li>
+                <li>Displaying a live map feature based on the zipcode entered by a user</li>
+                <li>Logic that allows users to sign up to be a super hero, and upload their picture</li>
               </ul>
               <button className="btn green-btn capes-btn btn-lg" type="button">
                 Donate To Restoration Fund

@@ -123,57 +123,57 @@ const Home = () => {
       </div>
       <>
         {/* OUR SERVICES HERO */}
-        <div className="px-4 py-5 my-5 text-center">
+        <div className="px-4 text-center">
           <h1 className="display-5 fw-bold redText">Our Services</h1>
           {/* start: row */}
           <div className="row">
-            {/* FEATURE 1 */}
+            {/* FEATURE 1: FIRE AND NATURAL DISASTER */}
             <div className="col-lg-3 mx-auto">
               <div className="card">
                 <img src={service1} className="card-img-top" alt="..." />
-                <div className="card-body">
+                <div className="card-body service-card-body">
                   <h4>Fire &amp; Natural Disaster</h4>
                   <p className="card-text">
-                    This is dummy text intended to fill out the card's content.
+                    Emergency preparedness for natural disasters can be difficult to plan for. Our heroes come prepared to put out fires, and even restore damage from events such as hurricanes and tornadoes.
                   </p>
                 </div>
               </div>
             </div>
 
-            {/* FEATURE 2 */}
+            {/* FEATURE 2: FIGHTING CRIME */}
             <div className="col-lg-3 mx-auto">
               <div className="card">
                 <img src={service2} className="card-img-top" alt="..." />
-                <div className="card-body">
+                <div className="card-body service-card-body">
                   <h4>Fighting Crime</h4>
                   <p className="card-text">
-                    This is dummy text intended to fill out the card's content.
+                    C.A.P.E.S. works closely with local police in conjunction with our roster of heroes to respond to crimes of all level.
                   </p>
                 </div>
               </div>
             </div>
 
-            {/* FEATURE 3 */}
+            {/* FEATURE 3: WORLD-ENDERS */}
             <div className="col-lg-3 mx-auto">
               <div className="card">
                 <img src={service3} className="card-img-top" alt="..." />
-                <div className="card-body">
+                <div className="card-body service-card-body">
                   <h4>World-Enders</h4>
                   <p className="card-text">
-                    This is dummy text intended to fill out the card's content.
+                    The world witnessed as Thanos attempted to destroy half of all living beings. C.A.P.E.S. is commited to responding to all tips in an effort to prevent future atrocities.
                   </p>
                 </div>
               </div>
             </div>
 
-            {/* FEATURE 4 */}
+            {/* FEATURE 4: MUCH MORE */}
             <div className="col-lg-3 mx-auto">
               <div className="card">
                 <img src={service4} className="card-img-top" alt="..." />
-                <div className="card-body">
+                <div className="card-body service-card-body">
                   <h4>Much More</h4>
                   <p className="card-text">
-                    This is dummy text intended to fill out the card's content.
+                    Have a pesky leak but you're not a plumber? Has your cat crawled into a tree and you've got no ladder? C.A.P.E.S. is here to address your concerns, no matter how big or small.
                   </p>
                 </div>
               </div>
@@ -364,7 +364,7 @@ const Home = () => {
 
       <>
         {/* OUR FEATURED HEROES */}
-        <div className="px-4 py-5 my-5 text-center">
+        <div className="px-4 text-center">
           <h1 className="display-5 fw-bold redText">Our Featured Heroes</h1>
           {/* start: row */}
           <div className="row">
@@ -459,6 +459,7 @@ const Home = () => {
           </Link>
         </div>
       </div>
+      <br />
     </>
   );
 };
