@@ -23,6 +23,7 @@
     "prettier": "^2.1.2"
   },
   "dependencies": {
-    "@popperjs/core": "^2.11.2"
+    "@popperjs/core": "^2.11.2",
+    "bcrypt": "^5.0.1"
   }
 }
