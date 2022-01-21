@@ -1,20 +1,23 @@
 import React from 'react';
+// IMPORT ROUTER 
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import { ApolloClient, ApolloProvider, InMemoryCache } from '@apollo/client';
+// IMPORT PAGES
 import Home from './pages/Home';
 import Ourheroes from './pages/OurHeroes';
 import Myprofile from './pages/MyProfile';
 import Matchup from './pages/Matchup';
 import Vote from './pages/Vote';
 import NotFound from './pages/NotFound';
+// IMPORT COMPONENTS
 import Header from './components/Header';
 import Footer from './components/Footer';
-
+// REQUIRE APOLLOCLIENT FOR GRAPHQL
 const client = new ApolloClient({
   uri: '/graphql',
   cache: new InMemoryCache(),
 });
-
+// CREATE MAIN REACT APP ELEMENT
 function App() {
   return (
     <ApolloProvider client={client}>
