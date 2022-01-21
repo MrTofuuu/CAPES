@@ -2,13 +2,6 @@
 // TODO: Adjust height and proportion of avengers jumbtotron
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import { HashLink as HLink } from "react-router-hash-link";
-
-// Here we import hero images to reduce potential path issues
-// import hero1 from "../assets/img/heroes/Antman.jpg";
-import hero2 from "../assets/img/heroes/BlackPanther.jpg";
-import hero3 from "../assets/img/heroes/BlackWidow.jpg";
-import hero4 from "../assets/img/heroes/CaptainAmerica.jpg";
 
 const Ourheroes = () => {
 

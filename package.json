@@ -23,6 +23,7 @@
     "prettier": "^2.1.2"
   },
   "dependencies": {
-    "@popperjs/core": "^2.11.2"
+    "@popperjs/core": "^2.11.2",
+    "react-icons": "^4.3.1"
   }
 }

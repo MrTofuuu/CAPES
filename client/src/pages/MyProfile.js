@@ -1,8 +1,11 @@
-// TODO: Replace dummy text with Hero names and descriptions
-// TODO: Adjust height and proportion of avengers jumbtotron
-import React, { useState } from "react";
-import { Link } from "react-router-dom";
-import { HashLink as HLink } from "react-router-hash-link";
+// TODO: Replace dummy text with Hero names and descriptions from seed data
+
+// IMPORT RATING SYSTEM COMPONENT
+import Rating from '../components/Rating';
+
+// Require the Rating Component
+// let StarRating = require('react-rating'); 
+
 
 const Ourheroes = () => {
 
@@ -21,8 +24,7 @@ const Ourheroes = () => {
       heroDescription: "Description",
     },
   ];
-
-
+  
   return (
     <><>
       {/* JUMBOTRON IMAGE */}
@@ -35,7 +37,7 @@ const Ourheroes = () => {
       </div>
 
       {/* PREVIOUSLY SUMMONED HEROES */}
-      <div className="px-4 py-5 my-5">
+      <div className="px-4">
         <h2 className="redText mb-4">Previously Summoned Heroes</h2>
           {heroObjects.map((card) => (
               <>
@@ -47,6 +49,7 @@ const Ourheroes = () => {
                   <h4>{card.heroName}</h4>
                   <p>{card.heroDescription}</p>
                   <p className="blueText"><bold>Rate Your Experience</bold></p>
+                  <Rating />
                 </div>
               </div>
               </>

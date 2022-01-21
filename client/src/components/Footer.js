@@ -1,8 +1,6 @@
 import React from "react";
-import { Link } from "react-router-dom";
-import { HashLink as HLink } from "react-router-hash-link";
-// import logoWhite from "../assets/img/logo-white.png";
 
+// CREATE FOOTER COMPONENT
 function Footer() {
   return (
     <footer className="text-muted py-5 bg-dark capes-footer">
