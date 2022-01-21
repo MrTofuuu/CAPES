@@ -6,6 +6,7 @@ const profileData = require('./profileData.json');
 
 db.once('open', async () => {
   await Hero.deleteMany({});
+  await Profile.deleteMany({});
 
   const heroSeed = await Hero.insertMany(heroData);
   const profileSeed = await Profile.insertMany(profileData);
