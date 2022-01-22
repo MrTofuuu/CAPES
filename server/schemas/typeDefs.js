@@ -22,6 +22,7 @@ const typeDefs = gql`
 
   type Query {
     hero: [Hero]
+    heroes(severity: Int): [Hero]
     profiles: [Profile]!
     profile(profileId: ID!): Profile
   }
