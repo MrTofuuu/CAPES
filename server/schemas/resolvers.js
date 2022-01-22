@@ -1,12 +1,15 @@
 const { Hero, Profile } = require('../models');
 const { AuthenticationError } = require('apollo-server-express');
-const { Profile } = require('../models');
 const { signToken } = require('../utils/auth');
 
 const resolvers = {
   Query: {
     hero: async () => {
       return Hero.find({});
+    },
+    heroes: async (parent, { severity }) => {
+      const params = severity ? { severity } : {};
+      return Hero.find(params);
     },
     profiles: async () => {
       return Profile.find();
