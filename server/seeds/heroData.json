@@ -2,132 +2,132 @@
   {
     "name": "Chris' Dad",
     "severity":"1",
-    "image":"#"
+    "image":"./client/src/assets/img/heroes/ChrisDad.png"
   },
   {
     "name": "Candra's Dad",
     "severity":"1",
-    "image":"#"
+    "image":"./client/src/assets/img/heroes/CandrasDad.png"
   },
   {
     "name": "Misty's Dad",
     "severity":"1",
-    "image":"#"
+    "image":"./client/src/assets/img/heroes/MistysDad.png"
   },
   {
     "name": "Konner's Dad",
     "severity":"1",
-    "image":"#"
+    "image":"./client/src/assets/img/heroes/KonnersDad.jpg"
   },
   {
     "name": "Bonnie's Dad",
     "severity":"1",
-    "image":"#"
+    "image":"./client/src/assets/img/heroes/BonniesDad.png"
   },
   {
     "name": "Black Widow",
     "severity":"2",
-    "image":"#"
+    "image":"./client/src/assets/img/heroes/"
   },
   {
     "name": "Hawkeye",
     "severity":"2",
-    "image":"#"
+    "image":"./client/src/assets/img/heroes/BlackWidow.jpg"
   },
   {
-    "name": "Ant-Man",
+    "name": "AntMan",
     "severity":"2",
-    "image":"#"
+    "image":"./client/src/assets/img/heroes/Antman.jpg"
   },
   {
     "name": "Winter Soldier",
     "severity":"2",
-    "image":"#"
+    "image":"./client/src/assets/img/heroes/WinterSoldier.jpg"
   },
   {
     "name": "Jessica Jones",
     "severity":"2",
-    "image":"#"
+    "image":"./client/src/assets/img/heroes/JessicaJones.jpg"
   },
   {
     "name": "Loki",
     "severity":"3",
-    "image":"#"
+    "image":"./client/src/assets/img/heroes/Loki.jpg"
   },
   {
     "name": "Star Lord",
     "severity":"3",
-    "image":"#"
+    "image":"./client/src/assets/img/heroes/Starlord.jpg"
   },
   {
     "name": "Gamora",
     "severity":"3",
-    "image":"#"
+    "image":"./client/src/assets/img/heroes/Gamora.jpg"
   },
   {
     "name": "Storm",
     "severity":"3",
-    "image":"#"
+    "image":"./client/src/assets/img/heroes/Storm.jpg"
   },
   {
     "name": "Dr. Strange",
     "severity":"3",
-    "image":"#"
+    "image":"./client/src/assets/img/heroes/drStrange.jpg"
   },
   {
     "name": "Wolverine",
     "severity":"3",
-    "image":"#"
+    "image":"./client/src/assets/img/heroes/wolverine.jpg"
   },
   {
     "name": "Iron Man",
     "severity":"4",
-    "image":"#"
+    "image":"./client/src/assets/img/heroes/Ironman.jpg"
   },
   {
     "name": "Captain America",
     "severity":"4",
-    "image":"#"
+    "image":"./client/src/assets/img/heroes/CaptainAmerica.jpg"
   },
   {
     "name": "Spider-Man",
     "severity":"4",
-    "image":"#"
+    "image":"./client/src/assets/img/heroes/spiderman.jpg"
   },
   {
     "name": "Vision",
     "severity":"4",
-    "image":"#"
+    "image":"./client/src/assets/img/heroes/Vision.jpg"
   },
   {
     "name": "Dr. Manhattan",
     "severity":"4",
-    "image":"#"
+    "image":"./client/src/assets/img/heroes/drManhattan.jpg"
   },
   {
     "name": "Scarlet Witch",
     "severity":"5",
-    "image":"#"
+    "image":"./client/src/assets/img/heroes/ScarletWitch.jpg"
   },
   {
     "name": "Black Panther",
     "severity":"5",
-    "image":"#"
+    "image":"./client/src/assets/img/heroes/BlackPanther.jpg"
   },
   {
     "name": "Hulk",
     "severity":"5",
-    "image":"#"
+    "image":"./client/src/assets/img/heroes/Hulk.jpg"
   },
   {
     "name": "Captian Marvel",
     "severity":"5",
-    "image":"#"
+    "image":"CaptainMarvel"
   },
   {
     "name": "Thor",
     "severity":"5",
-    "image":"#"
+    "image":"./client/src/assets/img/heroes/Thor.jpg"
   }
 
 ]
