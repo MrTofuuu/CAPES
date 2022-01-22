@@ -9,6 +9,7 @@
 7. Cards
 8. Footer
 9. Star Rating
+10. Media Queries
 
 ----------------------------------------------------------------------------------------------------------------------*/
 
@@ -54,6 +55,15 @@ html {
 }
 body {
   margin: 0;
+  
+}
+@keyframes fadeInAnimation {
+  0% {
+      opacity: 0;
+  }
+  100% {
+      opacity: 1;
+   }
 }
 main {
   display: block;
@@ -92,12 +102,24 @@ main {
 /*-------------------------------------------
 5. Jumbotron
 -------------------------------------------*/
-.capesJumbotron{
+/* .capesJumbotron{
   background: url("../src/assets/img/background-image-home.jpg") no-repeat center center; 
   -webkit-background-size: 100% 100%;
   -moz-background-size: 100% 100%;
   -o-background-size: 100% 100%;
   background-size: 100% 100%;
+} 
+*/
+.capesJumbotron{
+  background: url("../src/assets/img/background-image-home.jpg") no-repeat center; 
+  -webkit-background-size: 100% 100%;
+  -moz-background-size: 100% 100%;
+  -o-background-size: 100% 100%;
+  background-size: 100%;
+  /* Trying out some animations */
+  animation: fadeInAnimation ease 3s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
 }
 .heroesJumbotron{
   background: url("../src/assets/img/background-avengers.jpg") no-repeat center center; 
@@ -105,6 +127,10 @@ main {
   -moz-background-size: 100% 100%;
   -o-background-size: 100% 100%;
   background-size: 100% 100%;
+  /* Trying out some animations */
+  animation: fadeInAnimation ease 3s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
 }
 .userName {
   font-style: italic;
@@ -164,4 +190,50 @@ a {
 }
 input[type="radio"]{
   display: none;
+}
+
+/*-------------------------------------------
+10. Media Queries
+-------------------------------------------*/
+/* MOBILE -- SMALL */
+@media (max-width: 320px) {
+  .capesJumbotron{
+    background-size: cover;
+  }
+  .heroesJumbotron{
+    background-size: cover;
+  }
+}
+
+/* MOBILE -- MEDIUM */
+@media (max-width: 375px) {
+  .capesJumbotron{
+    background-size: cover;
+  }
+  .heroesJumbotron{
+    background-size: cover;
+  }
+}
+
+/* MOBILE -- LARGE */
+@media (max-width: 425px) {
+  .capesJumbotron{
+    background-size: cover;
+  }
+  .heroesJumbotron{
+    background-size: cover;
+  }
+}
+
+/* TABLET -- VERTICAL */
+@media (max-width: 768px) {
+  .capesJumbotron{
+    background-size: cover;
+  }
+  .heroesJumbotron{
+    background-size: cover;
+  }
+  .service-card-body {
+    height: 300px !important;
+  }
 }
