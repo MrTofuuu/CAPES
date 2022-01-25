@@ -34,18 +34,8 @@ profileSchema.pre('save', async function (next) {
 
 // compare the incoming password with the hashed password
 profileSchema.methods.isCorrectPassword = async function (password) {
-    console.log(typeof password);
-    console.log('this is inside the iscorrectPW method')
-    console.log(typeof this.password);
-    console.log(password === this.password);
-    if (password === this.password) {
-        return true;
-    } else {
-        return false;
-    }
-
+    return bcrypt.compare(password, this.password);
 };
-
 
 const Profile = model('Profile', profileSchema);
 
