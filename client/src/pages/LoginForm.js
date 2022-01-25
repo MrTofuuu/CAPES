@@ -5,14 +5,14 @@ import { LOGIN_USER } from '../utils/mutations';
 
 import Auth from '../utils/auth';
 
-const styles = {
-    loginPadding: {
-        marginTop: '50px',
-        marginBottom: '50px',
-        padding: '5px',
-    },
+// const styles = {
+//     loginPadding: {
+//         marginTop: '50px',
+//         marginBottom: '50px',
+//         padding: '5px',
+//     },
 
-};
+// };
 
 const LoginForm = (props) => {
     const [formState, setFormState] = useState({ email: '', password: '' });
@@ -50,53 +50,76 @@ const LoginForm = (props) => {
     };
 
     return (
-        <main className="flex-row justify-center mb-4">
-            <div className="col-12 col-lg-10">
-                <div className="card">
-                    <h4 className="card-header bg-dark text-light p-2">Login</h4>
-                    <div className="card-body">
-                        {data ? (
-                            <p>
-                                Success! You may now head{' '}
-                                <Link to="/">back to the homepage.</Link>
-                            </p>
-                        ) : (
-                            <form style={styles.loginPadding} onSubmit={handleFormSubmit}>
+        <>
+            {/* // start: row for form */}
+            <div className='row p-5 mb-4 formRow'>
+                <div className='col-lg-12 col-md-12 col-sm-12'>
+                    <h1>Sign In</h1>
+                    <h4 className='text-muted'>
+                        Welcome to CAPES! Please sign in so we can address your emergency.
+                    </h4>
+                    <p className='text-muted'>Don't have an account? &nbsp;
+                        <Link to={"./Signup"}>
+                        Sign Up.
+                        </Link>
+                    </p>
+                    <hr />
+                    {data ? (
+                        <p>
+                            Success! You may now head{' '}
+                            <Link to="/">back to the homepage.</Link>
+                        </p>
+                    ) : (
+                        <form onSubmit={handleFormSubmit}>
+                            {/* email */}
+                            <div className="mb-3">
+                                <label className="form-label">Email address</label>
                                 <input
-                                    className="form-input"
-                                    placeholder="Your email"
+                                    className="form-input form-control"
+                                    placeholder="yourEmail@email.com"
                                     name="email"
                                     type="email"
                                     value={formState.email}
-                                    onChange={handleChange}
+                                    onChange={handleChange} 
                                 />
+                            </div>
+                            
+                            {/* password */}
+                            <div className="mb-3">
+                                <label className="form-label">Email address</label>
                                 <input
-                                    className="form-input"
+                                    className="form-input form-control"
                                     placeholder="******"
                                     name="password"
                                     type="password"
                                     value={formState.password}
                                     onChange={handleChange}
                                 />
-                                <button
-                                    className="btn btn-block btn-info"
-                                    style={{ cursor: 'pointer' }}
-                                    type="submit"
-                                >
-                                    Submit
-                                </button>
-                            </form>
-                        )}
-
-                        {error && (
-                            <div className="my-3 p-3 bg-danger text-white">
-                                {error.message}
                             </div>
-                        )}
-                    </div>
+                            {/* submit button */}
+                            <button
+                                className="btn btn-primary"
+                                style={{ cursor: 'pointer' }}
+                                type="submit"
+                            >
+                                Submit
+                            </button>
+                        </form>
+                    )}
+                    {/* end data ? */}
+                    {error && (
+                        <div className="my-3 p-3 bg-danger text-white">
+                            {error.message}
+                        </div>
+                    )}
+                    {/* end: error */}
                 </div>
+                {/* end: col-lg-12 */}
             </div>
-        </main>
+            {/* end: row for form */}
+            
+        </>
+            
     );
 };
 
