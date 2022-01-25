@@ -25,7 +25,7 @@ function App() {
 
       <Router>
         <Header />
-        <div className="flex-column justify-center align-center min-100-vh">
+        {/* <div className="flex-column justify-center align-center min-100-vh"> */}
           <Switch>
             <Route exact path="/">
               <Home />
@@ -45,7 +45,7 @@ function App() {
               <NotFound />
             </Route>
           </Switch>
-        </div>
+        {/* </div> */}
         <Footer />
       </Router>
     </ApolloProvider>

@@ -3,8 +3,8 @@ import React from "react";
 // CREATE FOOTER COMPONENT
 function Footer() {
   return (
-    <footer className="text-muted py-5 bg-dark capes-footer">
-      <div className="container">
+    <footer className="text-muted py-5 px-5 bg-dark capes-footer">
+
         <div className="row">
           {/* COLUMN 1 */}
           <div className="col-lg-4">
@@ -45,8 +45,6 @@ function Footer() {
         </div>
         {/* end: row */}
         
-      </div>
-      {/* end: container */}
     </footer>
   );
 }
