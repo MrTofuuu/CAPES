@@ -6,12 +6,13 @@ import { ApolloClient, ApolloProvider, InMemoryCache } from '@apollo/client';
 import Home from './pages/Home';
 import Ourheroes from './pages/OurHeroes';
 import Myprofile from './pages/MyProfile';
-import Matchup from './pages/Matchup';
-import Vote from './pages/Vote';
 import NotFound from './pages/NotFound';
 // IMPORT COMPONENTS
 import Header from './components/Header';
 import Footer from './components/Footer';
+import LoginForm from './pages/LoginForm';
+import SignupForm from './pages/SignupForm';
+
 // REQUIRE APOLLOCLIENT FOR GRAPHQL
 const client = new ApolloClient({
   uri: '/graphql',
@@ -21,19 +22,13 @@ const client = new ApolloClient({
 function App() {
   return (
     <ApolloProvider client={client}>
-      
+
       <Router>
-      <Header/>
+        <Header />
         <div className="flex-column justify-center align-center min-100-vh">
           <Switch>
             <Route exact path="/">
               <Home />
-            </Route>
-            <Route exact path="/matchup">
-              <Matchup />
-            </Route>
-            <Route exact path="/matchup/:id">
-              <Vote />
             </Route>
             <Route exact path="/ourheroes">
               <Ourheroes />
@@ -41,12 +36,17 @@ function App() {
             <Route exact path="/myprofile">
               <Myprofile />
             </Route>
+            <Route exact path="/login">
+              <LoginForm /></Route>
+            <Route exact path="/signup">
+              <SignupForm />
+            </Route>
             <Route>
               <NotFound />
             </Route>
           </Switch>
         </div>
-      <Footer/>
+        <Footer />
       </Router>
     </ApolloProvider>
   );

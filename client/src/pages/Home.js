@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { HashLink as HLink } from "react-router-hash-link";
 import { useQuery } from "@apollo/client";
 // TODO: Delete eventually
-import { QUERY_MATCHUPS } from "../utils/queries";
+import { QUERY_PROFILES } from "../utils/queries";
 
 // Here we import service images to reduce potential path issues
 import service1 from "../assets/img/Features-Fire.jpg";
@@ -20,10 +20,10 @@ import hero4 from "../assets/img/heroes/CaptainAmerica.jpg";
 // Here we import a helper function that will check if the email is valid
 import { validateEmail } from "../utils/helpers";
 // This area pertains to graphql
-import { ValidationContext } from "graphql";
+
 
 const Home = () => {
-  const { loading, data } = useQuery(QUERY_MATCHUPS, {
+  const { loading, data } = useQuery(QUERY_PROFILES, {
     fetchPolicy: "no-cache",
   });
 
@@ -333,7 +333,7 @@ const Home = () => {
                       <div className="form-check mb-3">
                         <input className="form-check-input" type="checkbox" value={card.resultValue} id={card.resultValue} />
                         <label for={card.resultValue}>
-                        {card.resultName}
+                          {card.resultName}
                         </label>
                       </div>
                     </div>
@@ -350,7 +350,7 @@ const Home = () => {
                         Report A New Incident
                       </button>
                     </HLink>
-                
+
                   </div>
                 </div>
 
