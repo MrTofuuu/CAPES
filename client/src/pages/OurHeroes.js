@@ -1,4 +1,3 @@
-// TODO: Replace dummy text with Hero names and descriptions
 // TODO: Adjust height and proportion of avengers jumbtotron
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
@@ -10,92 +9,92 @@ const Ourheroes = () => {
     {
       heroImage: "../assets/heroes/Antman.jpg",
       altTag: "INFO",
-      heroName: "Hero",
-      heroDescription: "Description",
+      heroName: "Ant-Man",
+      heroDescription: "Genius-level intellect, size-changing via Pym Particles, telepathic communication with insects, dimension-hopping.",
     },
     {
       heroImage: "../assets/heroes/BlackPanther.jpg",
       altTag: "INFO",
-      heroName: "Hero",
-      heroDescription: "Description",
+      heroName: "Black Panther",
+      heroDescription: "Enhanced senses, superhuman condition, speed, martial artist, magical resistance, Vibranium-assisted outfit.",
     },
     {
       heroImage: "../assets/heroes/BlackWidow.jpg",
       altTag: "INFO",
-      heroName: "Hero",
-      heroDescription: "Description",
+      heroName: "Black Widow",
+      heroDescription: "Master spy & assassin, martial artist, armed combatant; skills in espionage, infiltration, disguise and deception, manipulation & hacking.",
     },
     {
       heroImage: "../assets/heroes/CaptainAmerica.jpg",
       altTag: "INFO",
-      heroName: "Hero",
-      heroDescription: "Description",
+      heroName: "Captain America",
+      heroDescription: "Strength, agility, stamina, healing ability, expert tactician, martial artist, indestructible shield.",
     },
     {
       heroImage: "../assets/heroes/CaptainMarvel.jpg",
       altTag: "INFO",
-      heroName: "Hero",
-      heroDescription: "Description",
+      heroName: "Captain Marvel",
+      heroDescription: "Strength, speed, stamina, resistant to most toxins, energy absorption and manipulation.",
     },
     {
       heroImage: "../assets/heroes/Falcon.jpg",
       altTag: "INFO",
-      heroName: "Hero",
-      heroDescription: "Description",
+      heroName: "Falcon",
+      heroDescription: "Supersonic flight speed, enhanced maneuverability and agility, force generation, extreme vision, pilot, combatant, marksman and tactician. Communication with birds.",
     },
     {
       heroImage: "../assets/heroes/Hawkeye.jpg",
       altTag: "INFO",
-      heroName: "Hero",
-      heroDescription: "Description",
+      heroName: "Hawkeye",
+      heroDescription: "Marksmanship, assassin, marital artist, knife & sword master and expert pilot.",
     },
     {
       heroImage: "../assets/heroes/Hulk.jpg",
       altTag: "INFO",
-      heroName: "Hero",
-      heroDescription: "Description",
+      heroName: "Hulk",
+      heroDescription: "Strength, speed, stamina, durability, regeneration, nigh invulnerability, breathing underwater.",
     },
     {
       heroImage: "../assets/heroes/Ironman.jpg",
       altTag: "INFO",
-      heroName: "Hero",
-      heroDescription: "Description",
+      heroName: "Iron Man",
+      heroDescription: "Genius-level intellect, multiple powered armor suits, ability to fly.",
     },
     {
       heroImage: "../assets/heroes/Joe.jpg",
       altTag: "INFO",
-      heroName: "Hero",
-      heroDescription: "Description",
+      heroName: "Joe The Plumber",
+      heroDescription: "Cleaning sewer lines, welding, soldering, appliance installation and maintenance, flexibility, dexterity",
     },
     {
       heroImage: "../assets/heroes/QuickSilver.jpg",
       altTag: "INFO",
-      heroName: "Hero",
-      heroDescription: "Description",
+      heroName: "Quicksilver",
+      heroDescription: "Superhuman speed, extreme force generation, excellent combatant, ability to alter time and think at superhuman speeds.",
     },
     {
       heroImage: "../assets/heroes/ScarletWitch.jpg",
       altTag: "INFO",
-      heroName: "Hero",
-      heroDescription: "Description",
+      heroName: "Scarlet Witch",
+      heroDescription: "Telekinesis, telepathy, teleportation, flight, reality, time, fire, weather and energy manipulation.",
     },
     {
       heroImage: "../assets/heroes/Thor.jpg",
       altTag: "INFO",
-      heroName: "Hero",
-      heroDescription: "Description",
+      heroName: "Thor",
+      heroDescription: "Strength, speed, stamina, durability, weather manipulation, flight (via Mjolnir), dense skin and bones with a resistance to injury.",
     },
     {
       heroImage: "../assets/heroes/Vision.jpg",
       altTag: "INFO",
-      heroName: "Hero",
-      heroDescription: "Description",
+      heroName: "Vision",
+      heroDescription: "Superhuman strength & durability; density manipulation, flight, energy blasts, synthetic material generation, mental & computer interaction, genius-level intellect & master combatant.",
     },
     {
       heroImage: "../assets/heroes/Wasp.jpg",
       altTag: "INFO",
-      heroName: "Hero",
-      heroDescription: "Description",
+      heroName: "Wasp",
+      heroDescription: "Superhuman strength & durability, speed, size-changing via Pym Particles, flight, bioelectric stinging",
     },
   ];
 
@@ -177,8 +176,7 @@ const Ourheroes = () => {
             Meet Our Team of Elite Heroes
           </h1>
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore.
+            Our heroes have a wide range of abilities, from super powers to elite plumbing skills. With C.A.P.E.S on your side, you'll always find someone for the job. 
           </p>
           <Link to="#">
             <button
