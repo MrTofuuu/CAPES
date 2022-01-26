@@ -2,18 +2,9 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 
 import { useMutation } from '@apollo/client';
-import { CREATE_USER } from '../utils/mutations';
+import { ADD_PROFILE } from '../utils/mutations';
 
 import Auth from '../utils/auth';
-
-const styles = {
-    signupPadding: {
-        marginTop: '50px',
-        marginBottom: '50px',
-        padding: '5px',
-    },
-
-};
 
 const SignupForm = () => {
     const [formState, setFormState] = useState({
@@ -22,7 +13,7 @@ const SignupForm = () => {
         password: '',
     });
     
-    const [createUser, { error, data }] = useMutation(CREATE_USER);
+    const [createProfile, { error, data }] = useMutation(ADD_PROFILE);
 
     // update state based on form input changes
     const handleChange = (event) => {
@@ -40,11 +31,11 @@ const SignupForm = () => {
         console.log(formState);
 
         try {
-            const { data } = await createUser({
+            const { data } = await createProfile({
                 variables: { ...formState },
             });
 
-            Auth.login(data.createUser.token);
+            Auth.login(data.createProfile.token);
         } catch (e) {
             console.error(e);
         }

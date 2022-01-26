@@ -38,11 +38,13 @@ profileSchema.methods.isCorrectPassword = async function (password) {
     console.log('this is inside the iscorrectPW method')
     console.log(typeof this.password);
     console.log(password === this.password);
-    if (password === this.password) {
-        return true;
-    } else {
-        return false;
-    }
+    return await bcrypt.compare(password, this.password);
+
+    // if (password === this.password) {
+    //     return true;
+    // } else {
+    //     return false;
+    // }
 
 };
 

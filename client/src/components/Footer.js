@@ -29,7 +29,7 @@ function Footer() {
           {/* COLUMN 3 */}
           <div className="col-lg-4">
             <h4 className="text-white">Plans for future development</h4>
-            <p className="mb-0">
+            <span className="mb-0">
               <ul className="my-3 mb-3">
                 <li>Implementing stripe "donation" logic</li>
                 <li>Displaying a live map feature based on the zipcode entered by a user</li>
@@ -38,7 +38,7 @@ function Footer() {
               <button className="btn green-btn capes-btn btn-lg" type="button">
                 Donate To Restoration Fund
               </button>
-            </p>
+            </span>
           </div>
 
           
