@@ -8,6 +8,13 @@ const heroSchema = new Schema({
   severity: {
     type: Number,
     required: true,
+  },
+  description: {
+    type: String
+  },
+  image: {
+    type: String,
+    required: true
   }
 });
 
