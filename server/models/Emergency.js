@@ -6,6 +6,7 @@ const emergencySchema = new Schema({
     },
     date: {
         type: Date,
+        default: Date.now
     },
     zipcode: {
         type: Number,
@@ -13,6 +14,12 @@ const emergencySchema = new Schema({
     description: {
         type: String,
     },
+    heroes: [
+        {
+          type: Schema.Types.ObjectId,
+          ref: 'Hero'
+        }
+      ]
 });
 
 
