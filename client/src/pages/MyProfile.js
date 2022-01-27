@@ -1,5 +1,5 @@
 // TODO: Replace dummy text with Hero names and descriptions from seed data
-
+import Auth from '../utils/auth';
 // IMPORT RATING SYSTEM COMPONENT
 import Rating from '../components/Rating';
 
@@ -31,7 +31,7 @@ const Ourheroes = () => {
       <div className="mb-4 bg-light rounded-3">
         <div className="container-fluid py-5 mt-100">
           <h1 className="display-5 fw-bold">
-            Welcome Back, <span className="userName"> FirstName</span>
+            Welcome Back, <span className="userName">{Auth.getProfile().data.name}</span>
           </h1>
         </div>
       </div>

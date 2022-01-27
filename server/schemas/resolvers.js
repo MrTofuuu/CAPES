@@ -37,6 +37,18 @@ const resolvers = {
 
       return { token, profile };
     },
+    addEmergency: async (parent, { heroes }, context) => {
+      console.log(context);
+      if (context.profile) {
+        const emergency = new Emergency({ heroes });
+
+        await Profile.findByIdAndUpdate(context.profile._id, { $push: { emergencies: emergency } });
+
+        return emergency;
+      }
+
+      throw new AuthenticationError('Not logged in');
+    },
     login: async (parent, { email, password }) => {
       const profile = await Profile.findOne({ email });
       console.log(profile.password);
