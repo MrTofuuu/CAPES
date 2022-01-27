@@ -17,3 +17,15 @@ export const QUERY_SINGLE_PROFILE = gql`
     }
   }
 `;
+
+export const QUERY_HEROES = gql`
+  query allHeroes {
+    hero {
+      _id
+      name
+      severity
+      description
+      image
+    }
+  }
+`;
