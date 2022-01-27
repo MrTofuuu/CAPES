@@ -1,9 +1,21 @@
-const { Hero, Profile } = require('../models');
+const { Hero, Profile, Emergency } = require('../models');
 const { AuthenticationError } = require('apollo-server-express');
 const { signToken } = require('../utils/auth');
 
 const resolvers = {
   Query: {
+
+    emergency: async () => {
+      return Emergency.findOne({ _id: emergencyId });
+    },
+    emergencyLevel: async (parent, { severity }) => {
+      const params = severity ? { severity } : {};
+      return Emergency.find(params);
+    },
+    emergencies: async () => {
+      return Emergency.find();
+    },
+
     hero: async () => {
       return Hero.find({});
     },

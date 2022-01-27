@@ -13,6 +13,13 @@ const typeDefs = gql`
     email: String
     password: String
   }
+  type Emergency {
+    _id: ID
+    severity: Int
+    date: String
+    zipcode: Int
+    description: String
+  }
 
   type Auth {
     token: ID!
@@ -24,6 +31,9 @@ const typeDefs = gql`
     heroes(severity: Int): [Hero]
     profiles: Profile
     profile(profileId: ID!): Profile
+    emergency:[Emergency]
+    emergencies: Emergency
+    emergencyLevel(severity: Int): Emergency
   }
 
   type Mutation {
