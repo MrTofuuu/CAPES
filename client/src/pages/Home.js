@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { HashLink as HLink } from "react-router-hash-link";
 import { useQuery } from "@apollo/client";
 // TODO: Delete eventually
-import { QUERY_PROFILES } from "../utils/queries";
+
 
 // Here we import service images to reduce potential path issues
 import service1 from "../assets/img/Features-Fire.jpg";
@@ -19,23 +19,39 @@ import hero4 from "../assets/img/heroes/CaptainAmerica.jpg";
 
 // Here we import a helper function that will check if the email is valid
 import { validateEmail } from "../utils/helpers";
+import { DropdownButton } from "react-bootstrap";
 // This area pertains to graphql
 
 
 const Home = () => {
-  const { loading, data } = useQuery(QUERY_PROFILES, {
-    fetchPolicy: "no-cache",
-  });
-
-  const matchupList = data?.matchups || [];
-
   // START: FORM VALIDATIONS
   // Create state variables for the fields in the form
+  const [severity, setSeverity] = useState("");
   const [email, setEmail] = useState("");
-  const [message, setMessage] = useState("");
+  const [description, setDescription] = useState("");
   const [name, setName] = useState("");
   const [zipcode, setZipcode] = useState("");
   const [errorMessage, setErrorMessage] = useState("");
+  const sevList = [
+    { sev: '1 (i.e. Cat in tree, Home Maintenance)' },
+    { sev: '2 (i.e. Bullying, Robbery)' },
+    { sev: '3 (i.e. Natural Disaster)' },
+    { sev: '4 (i.e. Attack of Super Villans)' },
+    { sev: '5 (i.e. World-Ender, Thanos is back)' }
+  ];
+
+  let toggleState = true;
+  let toggleStateDisplay;
+  let toggleStateDisplay2;
+
+  if (toggleState) {
+    toggleStateDisplay = "block";
+    toggleStateDisplay2 = "none";
+  } else {
+    toggleStateDisplay = "none";
+    toggleStateDisplay2 = "block";
+  };
+
 
   const handleInputChange = (e) => {
     const { target } = e;
@@ -45,8 +61,10 @@ const Home = () => {
     // Based on the input type, we set the state of either email, username, and password
     if (inputType === "email") {
       setEmail(inputValue);
-    } else if (inputType === "message") {
-      setMessage(inputValue);
+    } else if (inputValue) {
+      setSeverity(inputValue)
+    } else if (inputType === "description") {
+      setDescription(inputValue);
     } else if (inputType === "name") {
       setName(inputValue);
     }
@@ -59,19 +77,21 @@ const Home = () => {
     // Preventing the default behavior of the form submit (which is to refresh the page)
     e.preventDefault();
 
-    // First we check to see if the email is not valid or if the userName is empty. If so we set an error message to be displayed on the page.
-    if (!validateEmail(email) || !message || !name) {
-      setErrorMessage("Email invalid or message/name is empty");
+    // First we check to see if the email is not valid or if the userName is empty. If so we set an error description to be displayed on the page.
+    if (!validateEmail(email) || !description || !name) {
+      setErrorMessage("Email invalid or description/name is empty");
       // We want to exit out of this code block if something is wrong so that the user can correct it
       return;
       // Then we check to see if the password is not valid. If so, we set an error message regarding the password.
     }
 
     // If everything goes according to plan, we want to clear out the input after a successful registration.
-    setMessage("");
+    setSeverity("");
+    setDescription("");
     setName("");
     setEmail("");
     setZipcode("");
+    toggleState = !toggleState;
   };
   // END: FORM VALIDATIONS
 
@@ -187,6 +207,7 @@ const Home = () => {
       <>
         {/* REPORT YOUR EMERGENCY FORM*/}
         <div
+          style={{ display: toggleStateDisplay }}
           id="report-emergency"
           className="px-4 py-5 my-5 redBackground text-white"
         >
@@ -198,47 +219,38 @@ const Home = () => {
               <form className="form">
                 {/* EMERGENCY LEVEL */}
                 <label className="form-label">Emergency Level</label>
-                <div className="dropdown mb-3">
+                {/* removed this upon research that the select html tag is how react uses the drop down in conjunction with "selected"
+                 <div className="dropdown mb-3">
                   <button
                     className="btn btn-light dropdown-toggle"
                     type="button"
                     id="dropdownMenuButton1"
                     data-bs-toggle="dropdown"
                     aria-expanded="false"
+                    value={severity}
                   >
                     Select Emergency Level
                   </button>
-                  <ul
-                    className="dropdown-menu"
-                    aria-labelledby="dropdownMenuButton1"
-                  >
-                    <li>
-                      <a className="dropdown-item" href="javascript:void(0)">
-                        1 (i.e. Cat in tree, Home Maintenance)
-                      </a>
-                    </li>
-                    <li>
-                      <a className="dropdown-item" href="javascript:void(0)">
-                        2 (i.e. Bullying, Robbery)
-                      </a>
-                    </li>
-                    <li>
-                      <a className="dropdown-item" href="javascript:void(0)">
-                        3 (i.e. Natural Disaster)
-                      </a>
-                    </li>
-                    <li>
-                      <a className="dropdown-item" href="javascript:void(0)">
-                        4 (i.e. Attack of Super Villans)
-                      </a>
-                    </li>
-                    <li>
-                      <a className="dropdown-item" href="javascript:void(0)">
-                        5 (i.e. World-Ender, Thanos is back)
-                      </a>
-                    </li>
+
+
+                  <ul className="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                    {sevList.map(item => (
+                      <li key={item.sev}>{item.sev}</li>
+                    ))}
                   </ul>
-                </div>
+                </div> */}
+                {/* { sev: '1 (i.e. Cat in tree, Home Maintenance)' },
+                { sev: '2 (i.e. Bullying, Robbery)' },
+                { sev: '3 (i.e. Natural Disaster)' },
+                { sev: '4 (i.e. Attack of Super Villans)' },
+                { sev: '5 (i.e. World-Ender, Thanos is back)' } */}
+                <select>
+                  <option value="1">1 (i.e. Cat in tree, Home Maintenance)</option>
+                  <option value="2">2 (i.e. Bullying, Robbery)</option>
+                  <option value="3">3 (i.e. Natural Disaster)</option>
+                  <option value="4">4 (i.e. Attack of Super Villans)</option>
+                  <option value="5">5 (i.e. World-Ender, Thanos is back)</option>
+                </select>
 
                 {/* NAME */}
                 <div className="mb-3">
@@ -282,8 +294,8 @@ const Home = () => {
                     Describe What's Happening
                   </label>
                   <textarea
-                    value={message}
-                    name="message"
+                    value={description}
+                    name="description"
                     type="text"
                     className="form-control"
                     placeholder="Leave me a message"
@@ -315,6 +327,7 @@ const Home = () => {
       <>
         {/* RESULTS FORM*/}
         <div
+          style={{ display: toggleStateDisplay2 }}
           id="results-component"
           className="px-4 py-5 my-5 blueBackground text-white"
         >
@@ -332,7 +345,7 @@ const Home = () => {
                       <img src={card.resultImage} className="card-img-top mb-3" alt={card.resultAltTag} />
                       <div className="form-check mb-3">
                         <input className="form-check-input" type="checkbox" value={card.resultValue} id={card.resultValue} />
-                        <label for={card.resultValue}>
+                        <label htmlFor={card.resultValue}>
                           {card.resultName}
                         </label>
                       </div>
@@ -424,41 +437,6 @@ const Home = () => {
         </div>
         {/* end: our services */}
       </>
-
-      {/* TODO: DELETE THIS COMPONENT */}
-      <div classNameName="card bg-white card-rounded w-50">
-        <div classNameName="card-header bg-dark text-center">
-          <h1 className="redText">TODO: DELETE THIS COMPONENT!</h1>
-        </div>
-        <div classNameName="card-body m-5">
-          <h2>
-            I'm only keeping this here temporarily in case there are elements we
-            want to borrow from in the future (for instance the ability to display list of previous matchups)
-          </h2>
-          {loading ? (
-            <div>Loading...</div>
-          ) : (
-            <ul classNameName="square">
-              {matchupList.map((matchup) => {
-                return (
-                  <li key={matchup._id}>
-                    <Link to={{ pathname: `/matchup/${matchup._id}` }}>
-                      {matchup.tech1} vs.{matchup.tech2}
-                    </Link>
-                  </li>
-                );
-              })}
-            </ul>
-          )}
-        </div>
-        <div classNameName="card-footer text-center m-3">
-          <Link to="/matchup">
-            <button classNameName="btn btn-lg btn-danger">
-              Create Matchup!
-            </button>
-          </Link>
-        </div>
-      </div>
       <br />
     </>
   );
