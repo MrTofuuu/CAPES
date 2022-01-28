@@ -219,7 +219,8 @@ const Home = () => {
               <form className="form">
                 {/* EMERGENCY LEVEL */}
                 <label className="form-label">Emergency Level</label>
-                <div className="dropdown mb-3">
+                {/* removed this upon research that the select html tag is how react uses the drop down in conjunction with "selected"
+                 <div className="dropdown mb-3">
                   <button
                     className="btn btn-light dropdown-toggle"
                     type="button"
@@ -237,7 +238,19 @@ const Home = () => {
                       <li key={item.sev}>{item.sev}</li>
                     ))}
                   </ul>
-                </div>
+                </div> */}
+                {/* { sev: '1 (i.e. Cat in tree, Home Maintenance)' },
+                { sev: '2 (i.e. Bullying, Robbery)' },
+                { sev: '3 (i.e. Natural Disaster)' },
+                { sev: '4 (i.e. Attack of Super Villans)' },
+                { sev: '5 (i.e. World-Ender, Thanos is back)' } */}
+                <select>
+                  <option value="1">1 (i.e. Cat in tree, Home Maintenance)</option>
+                  <option value="2">2 (i.e. Bullying, Robbery)</option>
+                  <option value="3">3 (i.e. Natural Disaster)</option>
+                  <option value="4">4 (i.e. Attack of Super Villans)</option>
+                  <option value="5">5 (i.e. World-Ender, Thanos is back)</option>
+                </select>
 
                 {/* NAME */}
                 <div className="mb-3">
