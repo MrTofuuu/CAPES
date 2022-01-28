@@ -256,11 +256,11 @@ const Home = () => {
                 <div className="mb-3">
                   <label className="form-label">Your Full Name</label>
                   <input
-                    value={name}
+                    defaultValue={name}
                     name="name"
-                    type="text"
+                    type="textarea"
                     className="form-control"
-                    placeholder="Your First and Last Name"
+                    placeholder="Please enter your full name."
                     onChange={handleInputChange}
                   />
                 </div>
@@ -268,7 +268,7 @@ const Home = () => {
                 <div className="mb-3">
                   <label className="form-label">Your Email Address</label>
                   <input
-                    value={email}
+                    defaultValue={email}
                     name="email"
                     type="email"
                     className="form-control"
@@ -278,13 +278,13 @@ const Home = () => {
                 </div>
                 {/* ZIPCODE */}
                 <div className="mb-3">
-                  <label className="form-label">Zipcode</label>
+                  <label className="form-label">Zipcode:</label>
                   <input
-                    value={zipcode}
+                    defaultValue={zipcode}
                     name="zipcode"
-                    type="text"
+                    type="textarea"
                     className="form-control"
-                    placeholder="Zipcode of your emergency"
+                    placeholder="12345"
                     onChange={handleInputChange}
                   />
                 </div>
@@ -294,18 +294,19 @@ const Home = () => {
                     Describe What's Happening
                   </label>
                   <textarea
-                    value={description}
+                    defaultValue={description}
                     name="description"
-                    type="text"
+                    input type="text"
                     className="form-control"
-                    placeholder="Leave me a message"
+                    placeholder="Describe What's Happening"
                     onChange={handleInputChange}
                     rows="3"
                   />
                 </div>
 
                 <button
-                  type="button"
+                  input type="submit"
+                  value="submit"
                   onClick={handleFormSubmit}
                   className="btn capes-btn btn-light mb-3"
                 >
