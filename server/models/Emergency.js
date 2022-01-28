@@ -1,4 +1,5 @@
 const { Schema, model } = require('mongoose');
+const dateFormat = require('../utils/dateFormat');
 
 const emergencySchema = new Schema({
     severity: {
@@ -6,7 +7,8 @@ const emergencySchema = new Schema({
     },
     date: {
         type: Date,
-        default: Date.now
+        default: Date.now,
+        get: (timestamp) => dateFormat(timestamp),
     },
     zipcode: {
         type: Number,
@@ -16,10 +18,10 @@ const emergencySchema = new Schema({
     },
     heroes: [
         {
-          type: Schema.Types.ObjectId,
-          ref: 'Hero'
+            type: Schema.Types.ObjectId,
+            ref: 'Hero'
         }
-      ]
+    ]
 });
 
 
