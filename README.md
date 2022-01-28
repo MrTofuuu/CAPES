@@ -3,7 +3,7 @@
 [![GitHub closed issues](https://img.shields.io/github/issues-closed/mrtofuuu/capes?style=for-the-badge)](https://github.com/MrTofuuu/CAPES/issues?q=is%3Aclosed)
 [![GitHub closed pull requests](https://img.shields.io/github/issues-pr-closed/mrtofuuu/capes?style=for-the-badge)](https://github.com/MrTofuuu/CAPES/pulls?q=is%3Apr+is%3Aclosed)
 [![GitHub stars](https://img.shields.io/github/stars/MrTofuuu/CAPES?style=for-the-badge)](https://github.com/MrTofuuu/CAPES/stargazers)
-[![GitHub license](https://img.shields.io/github/license/mrtofuuu/CAPES?style=for-the-badge)](./LICENSE.md)
+[![GitHub license](https://img.shields.io/github/license/mrtofuuu/CAPES?style=for-the-badge)](./LICENSE)
 
 
 ## Description
