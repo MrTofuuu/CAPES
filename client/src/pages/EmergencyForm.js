@@ -86,38 +86,6 @@ const EmergencyForm = () => {
         }
     };
 
-    let resultObjects = [
-        {
-            resultImage: "../assets/heroes/Antman.jpg",
-            resultAltTag: "INFO",
-            resultValue: "heroID",
-            resultName: "Hero Name"
-        },
-        {
-            resultImage: "../assets/heroes/ScarletWitch.jpg",
-            resultAltTag: "INFO",
-            resultValue: "heroID",
-            resultName: "Hero Name"
-        },
-        {
-            resultImage: "../assets/heroes/Thor.jpg",
-            resultAltTag: "INFO",
-            resultValue: "heroID",
-            resultName: "Hero Name"
-        },
-        {
-            resultImage: "../assets/heroes/Vision.jpg",
-            resultAltTag: "INFO",
-            resultValue: "heroID",
-            resultName: "Hero Name"
-        }
-    ];
-
-
-
-
-
-
     // START: FORM VALIDATIONS
     // Create state variables for the fields in the form
     return (
