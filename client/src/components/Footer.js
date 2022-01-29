@@ -38,7 +38,7 @@ function Footer() {
             </ul>
             <HLink to="/stripe">
               <button className="btn green-btn capes-btn btn-lg" type="button" href="/stripe">
-                Donate To Restoration Fund
+                Donate To City Restoration Fund
               </button>
             </HLink>
 
