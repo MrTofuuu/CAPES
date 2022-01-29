@@ -58,8 +58,8 @@ function App() {
             <Ourheroes />
           </Route>
           <Route exact path="/myprofile">
-            <Myprofile />
             <EmergencyForm />
+            <Myprofile />
           </Route>
           <Route exact path="/login">
             <LoginForm /></Route>
