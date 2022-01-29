@@ -16,6 +16,10 @@ const emergencySchema = new Schema({
     description: {
         type: String,
     },
+    reporter: {
+        type: String,
+        required: true,
+    },
     heroes: [
         {
             type: Schema.Types.ObjectId,

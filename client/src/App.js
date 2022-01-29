@@ -13,6 +13,7 @@ import Header from './components/Header';
 import Footer from './components/Footer';
 import LoginForm from './pages/LoginForm';
 import SignupForm from './pages/SignupForm';
+import EmergencyForm from './pages/EmergencyForm';
 
 // REQUIRE APOLLOCLIENT FOR GRAPHQL
 // const client = new ApolloClient({
@@ -49,25 +50,27 @@ function App() {
       <Router>
         <Header />
         {/* <div className="flex-column justify-center align-center min-100-vh"> */}
-          <Switch>
-            <Route exact path="/">
-              <Home />
-            </Route>
-            <Route exact path="/ourheroes">
-              <Ourheroes />
-            </Route>
-            <Route exact path="/myprofile">
-              <Myprofile />
-            </Route>
-            <Route exact path="/login">
-              <LoginForm /></Route>
-            <Route exact path="/signup">
-              <SignupForm />
-            </Route>
-            <Route>
-              <NotFound />
-            </Route>
-          </Switch>
+        <Switch>
+          <Route exact path="/">
+            <Home />
+          </Route>
+          <Route exact path="/ourheroes">
+            <Ourheroes />
+          </Route>
+          <Route exact path="/myprofile">
+            <Myprofile />
+          </Route>
+          <Route exact path="/login">
+            <LoginForm /></Route>
+          <Route exact path="/emergency">
+            <EmergencyForm /></Route>
+          <Route exact path="/signup">
+            <SignupForm />
+          </Route>
+          <Route>
+            <NotFound />
+          </Route>
+        </Switch>
         {/* </div> */}
         <Footer />
       </Router>

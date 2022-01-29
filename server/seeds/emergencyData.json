@@ -3,30 +3,35 @@
       "severity": 1,
       "date":"1",
       "zipcode":"23455",
-      "description":"this is filler text from the previous emergency."
+      "description":"this is filler text from the previous emergency.",
+      "reporter":""
     },
     {
       "severity": 1,
       "date":"1",
       "zipcode":"23455",
-      "description":"this is filler text from the previous emergency."
+      "description":"this is filler text from the previous emergency.",
+      "reporter":""
     },
     {
       "severity": 1,
       "date":"1",
       "zipcode":"23455",
-      "description":"this is filler text from the previous emergency."
+      "description":"this is filler text from the previous emergency.",
+      "reporter":""
     },
     {
       "severity": 1,
       "date":"1",
       "zipcode":"23455",
-      "description":"this is filler text from the previous emergency."
+      "description":"this is filler text from the previous emergency.",
+      "reporter":""
     },
     {
       "severity": 1,
       "date":"1",
       "zipcode":"23455",
-      "description":"this is filler text from the previous emergency."
+      "description":"this is filler text from the previous emergency.",
+      "reporter":""
     }
 ]
