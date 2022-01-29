@@ -219,12 +219,6 @@ const EmergencyForm = () => {
                                     <button type="button" className="btn capes-btn green-btn mb-3 me-3">
                                         Summon Your Hero!
                                     </button>
-                                    <HLink to="/#report-emergency">
-                                        <button type="button" className="btn capes-btn btn-light mb-3">
-                                            Report A New Incident
-                                        </button>
-                                    </HLink>
-
                                 </div>
                             </div>
 
