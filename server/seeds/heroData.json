@@ -3,156 +3,156 @@
     "name": "Chris's Dad",
     "severity":"1",
     "description": "Can out-drink everyone around him, and if you get him drunk enough, he'll jump a fence just to prove he can do it.",
-    "image":"./client/src/assets/img/heroes/ChrisDad.png"
+    "image":"../assets/heroes/ChrisDad.png"
   },
   {
     "name": "Candra's Dad",
     "severity":"1",
     "description": "Always knows a guy who knows a guy, and is a never-ending supply of sarcasm and famous Desoto, TX BBQ.",
-    "image":"./client/src/assets/img/heroes/CandrasDad.png"
+    "image":"../assets/heroes/CandrasDad.png"
   },
   {
     "name": "Misty's Dad",
     "severity":"1",
     "description": "Ultimate gardener; can fix up your fickle fiddle-leaf fig or get your begonias back to blooming in no time.",
-    "image":"./client/src/assets/img/heroes/MistysDad.png"
+    "image":"../assets/heroes/MistysDad.png"
   },
   {
     "name": "Konner's Dad",
     "severity":"1",
     "description": "The neighborhood's favorite handy-man, can hold his alcohol like he can hold his screws...and he NEVER drops a screw.",
-    "image":"./client/src/assets/img/heroes/KonnersDad.jpg"
+    "image":"../assets/heroes/KonnersDad.jpg"
   },
   {
     "name": "Bonnie's Dad",
     "severity":"1",
     "description": "Super-human ability to know exactly what to say to make someone uncomfortable.",
-    "image":"./client/src/assets/img/heroes/BonniesDad.png"
+    "image":"../assets/heroes/BonniesDad.png"
   },
   {
     "name": "Black Widow",
     "severity":"2",
     "description": "Master spy & assassin, martial artist, armed combatant; skills in espionage, infiltration, disguise and deception, manipulation & hacking.",
-    "image":"./client/src/assets/img/heroes/BlackWidow.jpg"
+    "image":"../assets/heroes/BlackWidow.jpg"
   },
   {
     "name": "Hawkeye",
     "severity":"2",
     "description": "Marksmanship, assassin, marital artist, knife & sword master and expert pilot.",
-    "image":"./client/src/assets/img/heroes/Hawkeye.jpg"
+    "image":"../assets/heroes/Hawkeye.jpg"
   },
   {
     "name": "Ant Man",
     "severity":"2",
     "description": "Genius-level intellect, size-changing via Pym Particles, telepathic communication with insects, dimension-hopping.",
-    "image":"./client/src/assets/img/heroes/Antman.jpg"
+    "image":"../assets/heroes/Antman.jpg"
   },
   {
     "name": "Winter Soldier",
     "severity":"2",
     "description": "Energy blasts, superhuman strength, martial artist, speed, healing, stamina.",
-    "image":"./client/src/assets/img/heroes/WinterSoldier.jpg"
+    "image":"../assets/heroes/WinterSoldier.jpg"
   },
   {
     "name": "Jessica Jones",
     "severity":"2",
     "description": "Superhuman strength, flight, immunity to mind control.",
-    "image":"./client/src/assets/img/heroes/JessicaJones.jpg"
+    "image":"../assets/heroes/JessicaJones.jpg"
   },
   {
     "name": "Loki",
     "severity":"3",
     "description": "Strength, stamina, speed, genius, mastery of magic and illusion, energy projection, shapeshifting.",
-    "image":"./client/src/assets/img/heroes/Loki.jpg"
+    "image":"../assets/heroes/Loki.jpg"
   },
   {
     "name": "Star Lord",
     "severity":"3",
     "description": "Strength, flight via jet boots, master problem-solver, cybernetic enhancements, space travel, Element Gun that projects air, earth, fire, water.",
-    "image":"./client/src/assets/img/heroes/Starlord.jpg"
+    "image":"../assets/heroes/Starlord.jpg"
   },
   {
     "name": "Gamora",
     "severity":"3",
     "description": "Acrobatics, martial artist, marksmanship, regenerative healing powers, infinity cloak",
-    "image":"./client/src/assets/img/heroes/Gamora.jpg"
+    "image":"../assets/heroes/Gamora.jpg"
   },
   {
     "name": "Storm",
     "severity":"3",
     "description": "Power over the weather, skilled thief, excellent with handguns and knives, ability to see in darkness.",
-    "image":"./client/src/assets/img/heroes/Storm.jpg"
+    "image":"../assets/heroes/Storm.jpg"
   },
   {
     "name": "Dr. Strange",
     "severity":"3",
     "description": "Flight via his Cloak of Levitation, martial artist, wind & flame projection, telekinesis, hypnotism, ability to jump through dimensions.",
-    "image":"./client/src/assets/img/heroes/drStrange.jpg"
+    "image":"../assets/heroes/drStrange.jpg"
   },
   {
     "name": "Wolverine",
     "severity":"3",
     "description": "Reflexes, agility, senses, retractable adamantium-plated bone claws, regeneration, indestructible skeleton.",
-    "image":"./client/src/assets/img/heroes/wolverine.jpg"
+    "image":"../assets/heroes/wolverine.jpg"
   },
   {
     "name": "Iron Man",
     "severity":"4",
     "description": "Genius-level intellect, multiple powered armor suits, ability to fly.",
-    "image":"./client/src/assets/img/heroes/Ironman.jpg"
+    "image":"../assets/heroes/Ironman.jpg"
   },
   {
     "name": "Captain America",
     "severity":"4",
     "description": "Strength, agility, stamina, healing ability, expert tactician, martial artist, indestructible shield.",
-    "image":"./client/src/assets/img/heroes/CaptainAmerica.jpg"
+    "image":"../assets/heroes/CaptainAmerica.jpg"
   },
   {
     "name": "Spider-Man",
     "severity":"4",
     "description": "Strength, jumping, leaping, speed, “danger sense” precognition, custom web-shooters.",
-    "image":"./client/src/assets/img/heroes/spiderman.jpg"
+    "image":"../assets/heroes/spiderman.jpg"
   },
   {
     "name": "Vision",
     "severity":"4",
     "description": "Superhuman strength & durability; density manipulation, flight, energy blasts, synthetic material generation, mental & computer interaction, genius-level intellect & master combatant.",
-    "image":"./client/src/assets/img/heroes/Vision.jpg"
+    "image":"../assets/heroes/Vision.jpg"
   },
   {
     "name": "Dr. Manhattan",
     "severity":"4",
     "description": "Time travel, disintegration, replication, colossal growth, teleportation, space travel, ",
-    "image":"./client/src/assets/img/heroes/drManhattan.jpg"
+    "image":"../assets/heroes/drManhattan.jpg"
   },
   {
     "name": "Scarlet Witch",
     "severity":"5",
     "description": "Telekinesis, telepathy, teleportation, flight, manipulation of reality, time, fire, weather and energy.",
-    "image":"./client/src/assets/img/heroes/ScarletWitch.jpg"
+    "image":"../assets/heroes/ScarletWitch.jpg"
   },
   {
     "name": "Black Panther",
     "severity":"5",
     "description": "Enhanced senses, superhuman condition, speed, martial artist, magical resistance, Vibranium-assisted outfit.",
-    "image":"./client/src/assets/img/heroes/BlackPanther.jpg"
+    "image":"../assets/heroes/BlackPanther.jpg"
   },
   {
     "name": "Hulk",
     "severity":"5",
     "description": "Strength, speed, stamina, durability, regeneration, nigh invulnerability, breathing underwater.",
-    "image":"./client/src/assets/img/heroes/Hulk.jpg"
+    "image":"../assets/heroes/Hulk.jpg"
   },
   {
     "name": "Captian Marvel",
     "severity":"5",
     "description": "Strength, speed, stamina, resistant to most toxins, energy absorption and manipulation.",
-    "image":"./client/src/assets/img/heroes/CaptainMarvel.jpg"
+    "image":"../assets/heroes/CaptainMarvel.jpg"
   },
   {
     "name": "Thor",
     "severity":"5",
     "description": "Strength, speed, stamina, durability, weather manipulation, flight (via Mjolnir), dense skin and bones with a resistance to injury.",
-    "image":"./client/src/assets/img/heroes/Thor.jpg"
+    "image":"../assets/heroes/Thor.jpg"
   }
 ]
