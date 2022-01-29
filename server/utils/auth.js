@@ -19,6 +19,8 @@ module.exports = {
 
     try {
       const { data } = jwt.verify(token, secret, { maxAge: expiration });
+      console.log(data);
+      //this is related to the context.user requests in the resolvers. It does not reference the user model or data.
       req.user = data;
     } catch {
       console.log('Invalid token');

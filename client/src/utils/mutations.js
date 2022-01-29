@@ -1,10 +1,15 @@
 import { gql } from '@apollo/client';
 
 export const ADD_EMERGENCY = gql`
-  mutation addEmergency($severity: String!, $description: String!) {
-    addEmergency(severity: $severity, description: $description) {
+  mutation addEmergency($severity: Int!, $description: String!, $zipcode: Int!) {
+    addEmergency(severity: $severity, description: $description, zipcode: $zipcode) {
       severity
       description
+      heroes{
+        name
+        severity
+        image
+      }
     }
   }
 `;

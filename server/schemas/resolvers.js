@@ -37,12 +37,14 @@ const resolvers = {
 
       return { token, profile };
     },
-    addEmergency: async (parent, { heroes }, context) => {
+    addEmergency: async (parent, { severity, description, zipcode }, context) => {
       console.log(context);
-      if (context.profile) {
-        const emergency = new Emergency({ heroes });
+      if (context.user) {
+        const heroes = await Hero.find({ severity: severity });
+        const emergency = new Emergency({ heroes, severity, description, zipcode });
 
-        await Profile.findByIdAndUpdate(context.profile._id, { $push: { emergencies: emergency } });
+
+        await Profile.findByIdAndUpdate(context.user._id, { $push: { emergencies: emergency } });
 
         return emergency;
       }
@@ -50,8 +52,7 @@ const resolvers = {
       throw new AuthenticationError('Not logged in');
     },
     login: async (parent, { email, password }) => {
-      const profile = await Profile.findOne({ email });
-      console.log(profile.password);
+      const profile = await Profile.findOne({ email }); console.log(profile.password);
       if (!profile) {
         throw new AuthenticationError('No profile with this email found!');
       }
