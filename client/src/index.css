@@ -155,17 +155,31 @@ a {
 .capes-btn-danger a {
   text-decoration: none !important;
 }
-.capes-btn-danger :hover {
-  background-color: var(--gray) !important;
+.capes-btn-danger a:hover {
+  background-color: var(--redHover) !important;
   color: var(--white) !important;
-  text-decoration: underline;
 }
 .green-btn {
   background-color: var(--green) !important;
+  color: var(--white) !important;
   cursor: pointer;
+}
+.green-btn a {
+  color: var(--gray) !important;
+}
+.green-btn a:hover {
+  color: var(--white) !important;
 }
 .grayLink {
   color: var(--lightGray);
+}
+.stripeLink {
+  text-decoration: none;
+  color: var(--gray) !important;
+}
+.stripeLink a {
+  text-decoration: none;
+  color: var(--gray) !important;
 }
 
 /*-------------------------------------------

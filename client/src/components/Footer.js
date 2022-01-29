@@ -36,11 +36,11 @@ function Footer() {
               <li>Displaying a live map feature based on the zipcode entered by a user</li>
               <li>Logic that allows users to sign up to be a super hero, and upload their picture</li>
             </ul>
-            <HLink to="/stripe">
-              <button className="btn green-btn capes-btn btn-lg" type="button" href="/stripe">
+              <button className="btn green-btn capes-btn btn-lg" type="button">
+                <a className="stripeLink" href="https://stripe.com/payments" target="_blank" rel="noreferrer">
                 Donate To City Restoration Fund
+                </a>
               </button>
-            </HLink>
 
           </span>
         </div>
