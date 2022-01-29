@@ -13,7 +13,7 @@ import Header from './components/Header';
 import Footer from './components/Footer';
 import LoginForm from './pages/LoginForm';
 import SignupForm from './pages/SignupForm';
-import EmergencyForm from './pages/EmergencyForm';
+import EmergencyForm from './components/EmergencyForm';
 
 // REQUIRE APOLLOCLIENT FOR GRAPHQL
 // const client = new ApolloClient({
@@ -59,11 +59,10 @@ function App() {
           </Route>
           <Route exact path="/myprofile">
             <Myprofile />
+            <EmergencyForm />
           </Route>
           <Route exact path="/login">
             <LoginForm /></Route>
-          <Route exact path="/emergency">
-            <EmergencyForm /></Route>
           <Route exact path="/signup">
             <SignupForm />
           </Route>
