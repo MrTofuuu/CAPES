@@ -4,7 +4,6 @@ import { HashLink as HLink } from "react-router-hash-link";
 
 // TODO: Delete eventually
 
-
 // Here we import service images to reduce potential path issues
 import service1 from "../assets/img/Features-Fire.jpg";
 import service2 from "../assets/img/Features-Crime.jpg";
@@ -12,17 +11,41 @@ import service3 from "../assets/img/Features-WorldEnder.jpg";
 import service4 from "../assets/img/Features-MuchMore.jpg";
 
 // Here we import hero images to reduce potential path issues
-import hero1 from "../assets/img/heroes/Antman.jpg";
-import hero2 from "../assets/img/heroes/BlackPanther.jpg";
-import hero3 from "../assets/img/heroes/BlackWidow.jpg";
-import hero4 from "../assets/img/heroes/CaptainAmerica.jpg";
+// import hero1 from "../assets/img/heroes/Antman.jpg";
+// import hero2 from "../assets/img/heroes/BlackPanther.jpg";
+// import hero3 from "../assets/img/heroes/BlackWidow.jpg";
+// import hero4 from "../assets/img/heroes/CaptainAmerica.jpg";
 
 // Here we import a helper function that will check if the email is validation
 
-
 const Home = () => {
 
-
+  let featuredHeroes = [
+    {
+      heroImage: "../assets/heroes/BlackPanther.jpg",
+      altTag: "INFO",
+      heroName: "Black Panther",
+      heroDescription: "Enhanced senses, superhuman condition, speed, martial artist, magical resistance, Vibranium-assisted outfit.",
+    },
+    {
+      heroImage: "../assets/heroes/drManhattan.jpg",
+      altTag: "INFO",
+      heroName: "Dr. Manhattan",
+      heroDescription: "Time travel, disintegration, replication, colossal growth, teleportation, space travel.",
+    },
+    {
+      heroImage: "../assets/heroes/BlackWidow.jpg",
+      altTag: "INFO",
+      heroName: "Black Widow",
+      heroDescription: "Master spy & assassin, martial artist, armed combatant; skills in espionage, infiltration, disguise and deception, manipulation & hacking.",
+    },
+    {
+      heroImage: "../assets/heroes/CandrasDad.png",
+      altTag: "INFO",
+      heroName: "Candra's Dad",
+      heroDescription: "Always knows a guy who knows a guy, and is a never-ending supply of sarcasm and famous Desoto, TX BBQ.",
+    }
+  ];
 
   return (
     <>
@@ -111,8 +134,26 @@ const Home = () => {
           <h1 className="display-5 fw-bold redText">Our Featured Heroes</h1>
           {/* start: row */}
           <div className="row">
+
+          {featuredHeroes.map((card) => (
+            <>
+              <div className="col-lg-3 mx-auto">
+                <div className="card capesCard">
+                  <img
+                    src={card.heroImage}
+                    className="card-img-top"
+                    alt={card.altTag} />
+                  <div className="card-body">
+                    <h4>{card.heroName}</h4>
+                    <p className="card-text">{card.heroDescription}</p>
+                  </div>
+                </div>
+              </div>
+              </>
+          ))}
+
             {/* FEATURE 1 */}
-            <div className="col-lg-3 mx-auto">
+            {/* <div className="col-lg-3 mx-auto">
               <div className="card">
                 <img src={hero1} className="card-img-top" alt="..." />
                 <div className="card-body">
@@ -122,10 +163,10 @@ const Home = () => {
                   </p>
                 </div>
               </div>
-            </div>
+            </div> */}
 
             {/* FEATURE 2 */}
-            <div className="col-lg-3 mx-auto">
+            {/* <div className="col-lg-3 mx-auto">
               <div className="card">
                 <img src={hero2} className="card-img-top" alt="..." />
                 <div className="card-body">
@@ -135,10 +176,10 @@ const Home = () => {
                   </p>
                 </div>
               </div>
-            </div>
+            </div> */}
 
             {/* FEATURE 3 */}
-            <div className="col-lg-3 mx-auto">
+            {/* <div className="col-lg-3 mx-auto">
               <div className="card">
                 <img src={hero3} className="card-img-top" alt="..." />
                 <div className="card-body">
@@ -148,10 +189,10 @@ const Home = () => {
                   </p>
                 </div>
               </div>
-            </div>
+            </div> */}
 
             {/* FEATURE 4 */}
-            <div className="col-lg-3 mx-auto">
+            {/* <div className="col-lg-3 mx-auto">
               <div className="card">
                 <img src={hero4} className="card-img-top" alt="..." />
                 <div className="card-body">
@@ -161,7 +202,8 @@ const Home = () => {
                   </p>
                 </div>
               </div>
-            </div>
+            </div> */}
+
           </div>
           {/* end: row */}
         </div>
