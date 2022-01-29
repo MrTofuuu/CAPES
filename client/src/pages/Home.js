@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 
 import { HashLink as HLink } from "react-router-hash-link";
+import auth from "../utils/auth";
 
-// TODO: Delete eventually
 
 // Here we import service images to reduce potential path issues
 import service1 from "../assets/img/Features-Fire.jpg";
@@ -15,8 +15,6 @@ import service4 from "../assets/img/Features-MuchMore.jpg";
 // import hero2 from "../assets/img/heroes/BlackPanther.jpg";
 // import hero3 from "../assets/img/heroes/BlackWidow.jpg";
 // import hero4 from "../assets/img/heroes/CaptainAmerica.jpg";
-
-// Here we import a helper function that will check if the email is validation
 
 const Home = () => {
 
@@ -47,6 +45,31 @@ const Home = () => {
     }
   ];
 
+  // CREATE FUNCTION THAT CONTROLS GET STARTED BUTTON BASED ON USER AUTHENTICATION
+  function showGetStartedButton() {
+    if (auth.loggedIn()) {
+      return (
+        <HLink to="/myprofile">
+          <button
+            className="btn capes-btn capes-btn-danger btn-lg"
+            type="button">
+            Get Started
+          </button>
+        </HLink>
+      );
+    } else {
+      return (
+        <HLink to="/signup">
+          <button
+            className="btn capes-btn capes-btn-danger btn-lg"
+            type="button">
+            Sign Up To Get Started
+          </button>
+        </HLink>
+      );
+    }
+  }
+
   return (
     <>
       {/* JUMBOTRON IMAGE */}
@@ -55,14 +78,10 @@ const Home = () => {
           <h1 className="display-5 fw-bold mt-50">
             Tell us about your emergency.
           </h1>
-          <HLink to="/emergency">
-            <button
-              className="btn capes-btn capes-btn-danger btn-lg"
-              type="button"
-            >
-              Get Started
-            </button>
-          </HLink>
+
+          {/* TOGGLE GET STARTED BUTTON BASED ON USER AUTHENTICATION */}
+          {showGetStartedButton()}
+
         </div>
       </div>
       <>

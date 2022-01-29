@@ -13,15 +13,15 @@ const Ourheroes = () => {
   let heroObjects = [
     {
       heroImage: "../assets/heroes/Antman.jpg",
-      altTag: "INFO",
-      heroName: "Hero",
-      heroDescription: "Description",
+      altTag: "Ant Man",
+      heroName: "Ant Man",
+      heroDescription: "Genius-level intellect, size-changing via Pym Particles, telepathic communication with insects, dimension-hopping.",
     },
     {
       heroImage: "../assets/heroes/Thor.jpg",
-      altTag: "INFO",
-      heroName: "Hero",
-      heroDescription: "Description",
+      altTag: "Thor",
+      heroName: "Thor",
+      heroDescription: "Strength, speed, stamina, durability, weather manipulation, flight (via Mjolnir), dense skin and bones with a resistance to injury.",
     },
   ];
 
