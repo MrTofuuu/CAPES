@@ -92,7 +92,7 @@ const Home = () => {
           <div className="row">
             {/* FEATURE 1: FIRE AND NATURAL DISASTER */}
             <div className="col-lg-3 mx-auto">
-              <div className="card">
+              <div className="card capesCard">
                 <img src={service1} className="card-img-top" alt="..." />
                 <div className="card-body service-card-body">
                   <h4>Fire &amp; Natural Disaster</h4>
@@ -105,7 +105,7 @@ const Home = () => {
 
             {/* FEATURE 2: FIGHTING CRIME */}
             <div className="col-lg-3 mx-auto">
-              <div className="card">
+              <div className="card capesCard">
                 <img src={service2} className="card-img-top" alt="..." />
                 <div className="card-body service-card-body">
                   <h4>Fighting Crime</h4>
@@ -118,7 +118,7 @@ const Home = () => {
 
             {/* FEATURE 3: WORLD-ENDERS */}
             <div className="col-lg-3 mx-auto">
-              <div className="card">
+              <div className="card capesCard">
                 <img src={service3} className="card-img-top" alt="..." />
                 <div className="card-body service-card-body">
                   <h4>World-Enders</h4>
@@ -131,7 +131,7 @@ const Home = () => {
 
             {/* FEATURE 4: MUCH MORE */}
             <div className="col-lg-3 mx-auto">
-              <div className="card">
+              <div className="card capesCard">
                 <img src={service4} className="card-img-top" alt="..." />
                 <div className="card-body service-card-body">
                   <h4>Much More</h4>

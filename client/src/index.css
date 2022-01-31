@@ -152,6 +152,10 @@ a {
   border:0;
   color: var(--white) !important;
 }
+.capes-btn-danger:hover {
+  background-color: var(--redHover) !important;
+  color: var(--white) !important;
+}
 .capes-btn-danger a {
   text-decoration: none !important;
 }
@@ -161,8 +165,11 @@ a {
 }
 .green-btn {
   background-color: var(--green) !important;
-  color: var(--white) !important;
+  color: var(--gray) !important;
   cursor: pointer;
+}
+.green-btn:hover {
+  color: var(--white) !important;
 }
 .green-btn a {
   color: var(--gray) !important;
