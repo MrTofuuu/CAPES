@@ -20,6 +20,7 @@ const EmergencyForm = () => {
     const [errorMessage, setErrorMessage] = useState("");
     const [toggleOn, setToggleOn] = useState(false);
     const [results, setResults] = useState([]);
+    const [summonToggleOn, setSummonToggleOn] = useState(false); // not in use at the moment
     // const sevList = [
     //   { sev: '1 (i.e. Cat in tree, Home Maintenance)' },
     //   { sev: '2 (i.e. Bullying, Robbery)' },
@@ -79,11 +80,18 @@ const EmergencyForm = () => {
             setZipcode(zipcode);
             // setEmergencyText('#');
             setToggleOn(true);
+            setSummonToggleOn(false);
             console.log(data);
             setResults(data.addEmergency.heroes);
         } catch (err) {
             console.error(err);
         }
+    };
+
+    // This action displays the red form after user clicks Summon Hero
+    const handleSummonSubmit = (e) => {
+        setToggleOn(false);
+        setSummonToggleOn(true); // not in use at the moment
     };
 
     // START: FORM VALIDATIONS
@@ -194,6 +202,7 @@ const EmergencyForm = () => {
                 {/* end: row */}
             </div>
             {/* end: report your emergency form */}
+
             {/* RESULTS FORM*/}
             <div
                 style={{ display: toggleOn ? "block" : "none" }}
@@ -214,8 +223,8 @@ const EmergencyForm = () => {
                                         <img src={card.image} className="card-img-top mb-3" alt={card.name} />
                                         <div className="form-check mb-3">
                                             <input className="form-check-input" type="checkbox" value={false} id={card.resultValue} />
-                                            <label htmlFor={card.value}>
-                                                {card.value}
+                                            <label className="resultsText" htmlFor={card.value}>
+                                                {card.name}
                                             </label>
                                         </div>
                                     </div>
@@ -224,7 +233,12 @@ const EmergencyForm = () => {
                             {/* CALL-TO-ACTION BUTTONS */}
                             <div className="row">
                                 <div className="col-lg-3">
-                                    <button type="button" className="btn capes-btn green-btn mb-3 me-3">
+                                    <button
+                                        input type="submit"
+                                        value="submit"
+                                        onClick={handleSummonSubmit}
+                                        className="btn capes-btn btn-light mb-3 me-3"
+                                    >
                                         Summon Your Hero!
                                     </button>
                                 </div>
