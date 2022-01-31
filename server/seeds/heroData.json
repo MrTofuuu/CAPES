@@ -30,6 +30,12 @@
     "image":"../assets/heroes/BonniesDad.png"
   },
   {
+    "name": "The Tick",
+    "severity":"2",
+    "description": "Super strength, nigh invulnerability, will probably steal your girl.",
+    "image":"../assets/heroes/Tick.png"
+  },
+  {
     "name": "Black Widow",
     "severity":"2",
     "description": "Master spy & assassin, martial artist, armed combatant; skills in espionage, infiltration, disguise and deception, manipulation & hacking.",
@@ -150,9 +156,15 @@
     "image":"../assets/heroes/CaptainMarvel.jpg"
   },
   {
+    "name": "Batman",
+    "severity":"5",
+    "description": "Genius-level intelligence, master detective, master martial artist, access to high tech equipment.",
+    "image":"../assets/heroes/Batman.png"
+  },
+  {
     "name": "Thor",
     "severity":"5",
     "description": "Strength, speed, stamina, durability, weather manipulation, flight (via Mjolnir), dense skin and bones with a resistance to injury.",
-    "image":"../assets/heroes/Thor.jpg"
+    "image":"../assets/heroes/Thor.png"
   }
 ]
