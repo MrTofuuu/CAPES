@@ -159,12 +159,12 @@
     "name": "Batman",
     "severity":"5",
     "description": "Genius-level intelligence, master detective, master martial artist, access to high tech equipment.",
-    "image":"../assets/heroes/Batman.png"
+    "image":"../assets/heroes/Batmans.png"
   },
   {
     "name": "Thor",
     "severity":"5",
     "description": "Strength, speed, stamina, durability, weather manipulation, flight (via Mjolnir), dense skin and bones with a resistance to injury.",
-    "image":"../assets/heroes/Thor.png"
+    "image":"../assets/heroes/Thors.png"
   }
 ]
