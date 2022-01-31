@@ -57,7 +57,7 @@ function Header() {
     <nav id="navbar" className="navbar navbar-expand-md navbar-dark fixed-top bg-dark capes-nav">
           <div className="container-fluid">
             <a className="navbar-brand ms-3" href="/"><img className="logoWhite" src={logoWhite} alt="CAPES logo feature a white and gold shield and red cape" />
-              &nbsp; Civilians And Planetary Emergency Services</a>
+              <span className="toggleCAPES">&nbsp; Civilians And Planetary Emergency Services</span></a>
             <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
               aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
               <span className="navbar-toggler-icon"></span>

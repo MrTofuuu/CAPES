@@ -83,6 +83,9 @@ main {
 .logoWhite {
   height:60px;
 }
+.toggleCAPES {
+  display:inline-block;
+}
 
 /*-------------------------------------------
 4. Navbar
@@ -232,6 +235,9 @@ input[type="radio"]{
   .heroesJumbotron{
     background-size: cover;
   }
+  .toggleCAPES {
+    display:none;
+  }
 }
 
 /* MOBILE -- MEDIUM */
@@ -242,6 +248,9 @@ input[type="radio"]{
   .heroesJumbotron{
     background-size: cover;
   }
+  .toggleCAPES {
+    display:none;
+  }
 }
 
 /* MOBILE -- LARGE */
@@ -251,6 +260,9 @@ input[type="radio"]{
   }
   .heroesJumbotron{
     background-size: cover;
+  }
+  .toggleCAPES {
+    display:none;
   }
 }
 
@@ -264,5 +276,8 @@ input[type="radio"]{
   }
   .service-card-body {
     height: 300px !important;
+  }
+  .toggleCAPES {
+    display:none;
   }
 }
