@@ -12,7 +12,6 @@ const Ourheroes = () => {
   const [phone, setPhone] = useState("");
   const [email, setEmail] = useState("");
   const [description, setDescription] = useState("");
-  const [errorMessage, setErrorMessage] = useState("");
 
   // Handle input for form fields
   const handleInputChange = (e) => {
@@ -39,41 +38,6 @@ const Ourheroes = () => {
       setDescription(inputValue);
     } 
   };
-
-  // Handle form onSubmit action
-  const handleFormSubmit = (e) => {
-    // TODO: Display success message after submission, and close modal
-    // Preventing the default behavior of the form submit (which is to refresh the page)
-    e.preventDefault();
-
-    // Check to see if first or last name is empty
-    if (!firstName || !lastName) {
-      setErrorMessage("Please Enter Your Name");
-      return;
-    }
-    // Check to see if alias is empty
-    if (!alias) {
-      setErrorMessage("Please Enter Your Super Hero Alias");
-      return;
-    }
-    if (!email) {
-      setErrorMessage("Please Enter Your Email");
-      return;
-    }
-    if (!description) {
-      setErrorMessage("Please tell us about your super hero abilities");
-      return;
-    }
-
-    // If everything goes according to plan, we want to clear out the input after a successful registration.
-    setFirstName("");
-    setLastName("");
-    setAlias("");
-    setPhone("");
-    setEmail("");
-    setDescription("");
-  };
-
   
   const { loading, error, data } = useQuery(QUERY_HEROES)
     
@@ -129,7 +93,7 @@ const Ourheroes = () => {
       </div>
       {/* end: all capes heroes */}
     </><>
-        {/* start: modal */}
+        {/* start: modal 1 */}
         <div className="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
           <div className="modal-dialog">
             <div className="modal-content">
@@ -226,12 +190,6 @@ const Ourheroes = () => {
                     </div>
                   </form>
 
-                  {/* ERROR MESSAGE */}
-                  {errorMessage && (
-                    <div>
-                      <p className="error-text">{errorMessage}</p>
-                    </div>
-                  )}
                 </div>
 
                 {/* END: FORM */}
@@ -245,15 +203,52 @@ const Ourheroes = () => {
                 >
                   Cancel
                 </button>
-                <button type="button" className="btn btn-primary" onClick={handleFormSubmit}>
+                
+                <button type="button" className="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal2">
                   Submit Application
+                </button>
+                {/* <button type="button" className="btn btn-primary" data-bs-dismiss="modal">
+                  Submit Application
+                </button> */}
+              </div>
+            </div>
+          </div>
+        </div>
+        {/* end: modal 1 */}
+
+        {/* start: modal 2 */}
+        <div className="modal fade" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel2" aria-hidden="true">
+          <div className="modal-dialog">
+            <div className="modal-content">
+              <div className="modal-header">
+                {/* TITLE */}
+                <h5 className="modal-title" id="exampleModalLabel">
+                  Success!
+                </h5>
+                {/* CLOSE MODAL BUTTON */}
+                <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              {/* MODAL BODY */}
+              <div className="modal-body">
+                <p className="text-muted">
+                  Your C.A.P.E.S. application has successfully been submitted.
+                </p>
+              </div>
+              {/* MODAL FOOTER */}
+              <div className="modal-footer">
+                <button
+                  type="button"
+                  className="btn btn-secondary"
+                  data-bs-dismiss="modal"
+                >
+                  Close
                 </button>
               </div>
             </div>
           </div>
         </div>
-        {/* end: modal */}
-      </></>
+        {/* end: modal 2 */}
+    </></>
   );
   // end: return
 };
