@@ -30,6 +30,19 @@ export const QUERY_HEROES = gql`
   }
 `;
 
+export const GET_FEATURED_HEROES = gql`
+  query FeaturedHeroes {
+  featuredHeroes {
+    _id
+    description
+    featured
+    image
+    name
+    severity
+  }
+}
+`
+
 export const QUERY_EMERGENCY = gql`
   query getEmergencies{
     emergencies{

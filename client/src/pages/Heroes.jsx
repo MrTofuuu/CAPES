@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { useQuery } from '@apollo/client'
 import { QUERY_HEROES } from "../utils/queries";
 
-const Ourheroes = () => {
+const Heroes = () => {
 
   // Create state variables for the fields in the hero submission form
   const [firstName, setFirstName] = useState("");
@@ -13,9 +13,18 @@ const Ourheroes = () => {
   const [email, setEmail] = useState("");
   const [description, setDescription] = useState("");
 
+  const [formState, setFormState] = useState({
+    firstName:'',
+    lastName:'',
+    alias: '',
+    phone:'',
+    email:'',
+    description:''
+  })
   // Handle input for form fields
-  const handleInputChange = (e) => {
-    const { target } = e;
+  const handleChange = (e) => {
+    // FIXME: this needs to be refactored to use form state
+    const { firstName, lastName, alias, phone, email, description } = e.target;
     const inputType = target.name;
     const inputValue = target.value;
 
@@ -253,4 +262,4 @@ const Ourheroes = () => {
   // end: return
 };
 
-export default Ourheroes;
+export default Heroes;

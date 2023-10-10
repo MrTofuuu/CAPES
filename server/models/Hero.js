@@ -15,8 +15,11 @@ const heroSchema = new Schema({
   image: {
     type: String,
     required: true
+  },
+  featured:{
+    type:Boolean
   }
-  // TODO: Need to add a featured flag or something similar 
+  
 });
 
 const Hero = model('Hero', heroSchema);

@@ -6,7 +6,7 @@ import { ADD_USER } from '../utils/mutations';
 
 import Auth from '../utils/auth';
 
-const SignupForm = () => {
+const Signup = () => {
     const [formState, setFormState] = useState({
         name: '',
         email: '',
@@ -129,4 +129,4 @@ const SignupForm = () => {
     );
 };
 
-export default SignupForm;
+export default Signup;

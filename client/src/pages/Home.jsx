@@ -1,15 +1,16 @@
 import React, { useState } from "react";
-
+import { useQuery } from '@apollo/client'
 import { HashLink as HLink } from "react-router-hash-link";
 import auth from "../utils/auth";
-
-
+import HeroCard from '../components/HeroCard/HeroCard'
+import { GET_FEATURED_HEROES } from '../utils/queries';
 // Here we import service images to reduce potential path issues
 import service1 from "../assets/img/Features-Fire.jpg";
 import service2 from "../assets/img/Features-Crime.jpg";
 import service3 from "../assets/img/Features-WorldEnder.jpg";
 import service4 from "../assets/img/Features-MuchMore.jpg";
 
+import spinner from "../assets/spinner.gif"
 // Here we import hero images to reduce potential path issues
 // import hero1 from "../assets/img/heroes/Antman.jpg";
 // import hero2 from "../assets/img/heroes/BlackPanther.jpg";
@@ -17,7 +18,14 @@ import service4 from "../assets/img/Features-MuchMore.jpg";
 // import hero4 from "../assets/img/heroes/CaptainAmerica.jpg";
 
 const Home = () => {
-    // TODO: This needs to be refactored, it should go in the data base
+  // using a query to get all the featured heroes to be rendered 
+  const { loading, data } = useQuery(GET_FEATURED_HEROES)
+  console.log(loading)
+  console.log(data);
+
+  // const featuredHeroesData = data.featuredHeroes;
+  // console.log(typeof(featuredHeroesData))
+  // TODO: This needs to be refactored, it should go in the data base
   let featuredHeroes = [
     {
       heroImage: "../assets/heroes/BlackPanther.jpg",
@@ -153,24 +161,34 @@ const Home = () => {
           <h1 className="display-5 fw-bold redText">Our Featured Heroes</h1>
           {/* start: row */}
           <div className="row">
+            {/* FIXME: this needs to use the data from the query, but loading seems to blow it up */}
+            {/* {featuredHeroes.map((card, index) => (
+              <HeroCard
+                key={index}
+                name={card.heroName}
+                altTag={card.altTag}
+                image={card.heroImage}
+                description={card.heroDescription}
 
-            {featuredHeroes.map((card) => (
-              <>
-                <div className="col-lg-3 mx-auto" key={card.heroName}>
-                  <div className="card capesCard">
-                    <img
-                      src={card.heroImage}
-                      className="card-img-top"
-                      alt={card.altTag} />
-                    <div className="card-body">
-                      <h4>{card.heroName}</h4>
-                      <p className="card-text">{card.heroDescription}</p>
-                    </div>
-                  </div>
-                </div>
-              </>
+              />
+
+
+            ))} */}
+
+  
+            {loading ? <img src={spinner} alt="loading" /> : data.featuredHeroes.map((hero, index) => (
+              <HeroCard 
+                key={hero._id}
+                id={hero._id}
+                name={hero.name}
+
+                image={hero.image}
+                description={hero.description}
+
+              />
+
+
             ))}
-
             {/* FEATURE 1 */}
             {/* <div className="col-lg-3 mx-auto">
               <div className="card">

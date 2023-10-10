@@ -6,6 +6,7 @@ const typeDefs = `
     severity: Int!
     description: String!
     image: String!
+    featured: Boolean!
   }
 
   type User {
@@ -31,6 +32,7 @@ const typeDefs = `
 
   type Query {
     hero: [Hero]
+    featuredHeroes: [Hero]
     heroes(severity: Int): [Hero]
     users: User
     user(userId: ID!): User

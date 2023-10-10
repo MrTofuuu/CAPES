@@ -5,14 +5,14 @@ import { ApolloClient, ApolloProvider, InMemoryCache, createHttpLink } from '@ap
 import { setContext } from '@apollo/client/link/context';
 // IMPORT PAGES
 import Home from './pages/Home';
-import Ourheroes from './pages/OurHeroes';
-import Myprofile from './pages/Profile';
+import Heroes from './pages/Heroes';
+import Profile from './pages/Profile';
 import NotFound from './pages/NotFound';
 // IMPORT COMPONENTS
 import Header from './components/Header/Header';
 import Footer from './components/Footer/Footer';
 import Login from './pages/Login';
-import SignupForm from './pages/SignupForm';
+import SignupForm from './pages/Signup';
 import EmergencyForm from './components/EmergencyForm/EmergencyForm';
 
 
@@ -47,12 +47,12 @@ function App() {
           <Route exact path="/">
             <Home />
           </Route>
-          <Route exact path="/ourheroes">
-            <Ourheroes />
+          <Route exact path="/heroes">
+            <Heroes />
           </Route>
-          <Route exact path="/myprofile">
+          <Route exact path="/profile">
             <EmergencyForm />
-            <Myprofile />
+            <Profile />
           </Route>
           <Route exact path="/login">
             <Login />

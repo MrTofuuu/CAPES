@@ -24,6 +24,9 @@ const resolvers = {
       const params = severity ? { severity } : {};
       return Hero.find(params);
     },
+    featuredHeroes: async () => {
+      return Hero.find({ featured: true })
+    },
     users: async () => {
       return User.find();
     },
