@@ -101,9 +101,7 @@ const EmergencyForm = () => {
             {/* JUMBOTRON IMAGE */}
             <div className="mb-4 bg-light rounded-3">
                 <div className="container-fluid py-5 mt-100">
-                    <h1 className="display-5 fw-bold">
-                        Welcome Back, <span className="userName">{Auth.getProfile().data.name}</span>
-                    </h1>
+                    <h1 className="display-5 fw-bold">Welcome Back, <span className="userName">{Auth.getProfile().data.name}</span></h1>
                 </div>
             </div>
             {/* REPORT YOUR EMERGENCY FORM*/}

@@ -1,6 +1,6 @@
 const db = require('../config/connection');
 const { Hero, Profile, Emergency, } = require('../models');
-
+const cleanDb = require('../config/cleanDB');
 const heroData = require('./heroData.json');
 const profileData = require('./profileData.json');
 const emergencyData = require('./emergencyData.json')

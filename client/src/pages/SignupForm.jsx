@@ -12,8 +12,8 @@ const SignupForm = () => {
         email: '',
         password: '',
     });
-    
-    const [createProfile, { error, data }] = useMutation(ADD_PROFILE);
+
+    const [addProfile, { error, data }] = useMutation(ADD_PROFILE);
 
     // update state based on form input changes
     const handleChange = (event) => {
@@ -30,15 +30,18 @@ const SignupForm = () => {
         event.preventDefault();
         console.log(formState);
 
-        try {
-            const { data } = await createProfile({
-                variables: { ...formState },
-            });
+        const mutationResponse = await addProfile({
+            variables: {
+                name: formState.name,
+                email: formState.email,
+                password: formState.password
+            }
+        })
 
-            Auth.login(data.createProfile.token);
-        } catch (e) {
-            console.error(e);
-        }
+        const token = mutationResponse.data.addProfile.token;
+        console.log(token)
+
+        Auth.login(token);
     };
 
     return (
@@ -53,7 +56,7 @@ const SignupForm = () => {
                     </h4>
                     <p className='text-muted'>Already have an account? &nbsp;
                         <Link to={"./Login"}>
-                        Sign In
+                            Sign In
                         </Link>
                     </p>
                     <hr />
@@ -85,7 +88,7 @@ const SignupForm = () => {
                                     name="email"
                                     type="email"
                                     value={formState.email}
-                                    onChange={handleChange} 
+                                    onChange={handleChange}
                                 />
                             </div>
                             {/* password */}
@@ -97,7 +100,7 @@ const SignupForm = () => {
                                     name="password"
                                     type="password"
                                     value={formState.password}
-                                    onChange={handleChange} 
+                                    onChange={handleChange}
                                 />
                             </div>
                             {/* submit button */}
@@ -120,62 +123,8 @@ const SignupForm = () => {
                 </div>
                 {/* end: col-lg-12 */}
             </div>
-            {/* end: row */}
-
-            {/* // old row */}
-            {/* <div>
-                <div className="col-12 col-lg-10">
-                    <div className="card">
-                        <h4 className="card-header bg-dark text-light p-2">Sign Up</h4>
-                        <div className="card-body">
-                            {data ? (
-                                <p>
-                                    Success! You may now head{' '}
-                                    <Link to="/">back to the homepage.</Link>
-                                </p>
-                            ) : (
-                                <form style={styles.signupPadding} onSubmit={handleFormSubmit}>
-                                    <input
-                                        className="form-input"
-                                        placeholder="Your name"
-                                        name="name"
-                                        type="text"
-                                        value={formState.name}
-                                        onChange={handleChange} />
-                                    <input
-                                        className="form-input"
-                                        placeholder="Your email"
-                                        name="email"
-                                        type="email"
-                                        value={formState.email}
-                                        onChange={handleChange} />
-                                    <input
-                                        className="form-input"
-                                        placeholder="******"
-                                        name="password"
-                                        type="password"
-                                        value={formState.password}
-                                        onChange={handleChange} />
-                                    <button
-                                        className="btn btn-block btn-info"
-                                        style={{ cursor: 'pointer' }}
-                                        type="submit"
-                                    >
-                                        Submit
-                                    </button>
-                                </form>
-                            )}
-
-                            {error && (
-                                <div className="my-3 p-3 bg-danger text-white">
-                                    {error.message}
-                                </div>
-                            )}
-                        </div>
-                    </div>
-                </div>
-            </div> */}
-            </>
+           
+        </>
 
     );
 };
