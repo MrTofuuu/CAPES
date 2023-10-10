@@ -26,6 +26,6 @@ const emergencySchema = new Schema({
 
 
 const Emergency = model('Emergency', emergencySchema);
-console.log(Emergency);
+// console.log(Emergency);
 
 module.exports = Emergency;

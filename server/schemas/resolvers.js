@@ -1,6 +1,7 @@
 const { Hero, Profile, Emergency } = require('../models');
-const { AuthenticationError } = require('apollo-server-express');
-const { signToken } = require('../utils/auth');
+// previously had AuthenticationError imported directly here 
+// const { AuthenticationError } = require('apollo-server-express');
+const { signToken, AuthenticationError } = require('../utils/auth');
 
 const resolvers = {
   Query: {
@@ -32,9 +33,11 @@ const resolvers = {
   },
   Mutation: {
     addProfile: async (parent, args) => {
+      console.log("inside addProfile resolver")
       const profile = await Profile.create(args);
       const token = signToken(profile);
-
+      console.log('signed token')
+      console.log(token)
       return { token, profile };
     },
     addEmergency: async (parent, { severity, description, zipcode }, context) => {
@@ -49,7 +52,7 @@ const resolvers = {
         return emergency;
       }
 
-      throw new AuthenticationError('Not logged in');
+      throw AuthenticationError;
     },
     login: async (parent, { email, password }) => {
       const profile = await Profile.findOne({ email }); console.log(profile.password);
@@ -60,7 +63,7 @@ const resolvers = {
       const correctPw = await profile.isCorrectPassword(password);
       console.log(correctPw);
       if (!correctPw) {
-        throw new AuthenticationError('Incorrect password!');
+        throw AuthenticationError;
       }
 
       const token = signToken(profile);
