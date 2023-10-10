@@ -2,7 +2,7 @@
 import Auth from '../utils/auth';
 import React, { useState } from "react";
 // IMPORT RATING SYSTEM COMPONENT
-import Rating from '../components/Rating';
+import Rating from '../components/Rating/Rating';
 
 // Require the Rating Component
 // let StarRating = require('react-rating'); 

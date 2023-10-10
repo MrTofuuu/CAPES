@@ -1,4 +1,4 @@
-const { Hero, Profile, Emergency } = require('../models');
+const { Hero, User, Emergency } = require('../models');
 // previously had AuthenticationError imported directly here 
 // const { AuthenticationError } = require('apollo-server-express');
 const { signToken, AuthenticationError } = require('../utils/auth');
@@ -24,21 +24,21 @@ const resolvers = {
       const params = severity ? { severity } : {};
       return Hero.find(params);
     },
-    profiles: async () => {
-      return Profile.find();
+    users: async () => {
+      return User.find();
     },
-    profile: async (parent, { profileId }) => {
-      return Profile.findOne({ _id: profileId });
+    user: async (parent, { userId }) => {
+      return User.findOne({ _id: userId });
     },
   },
   Mutation: {
-    addProfile: async (parent, args) => {
-      console.log("inside addProfile resolver")
-      const profile = await Profile.create(args);
-      const token = signToken(profile);
+    addUser: async (parent, args) => {
+      console.log("inside addUser resolver")
+      const user = await User.create(args);
+      const token = signToken(user);
       console.log('signed token')
       console.log(token)
-      return { token, profile };
+      return { token, user };
     },
     addEmergency: async (parent, { severity, description, zipcode }, context) => {
       console.log(context);
@@ -47,7 +47,7 @@ const resolvers = {
         const emergency = new Emergency({ heroes, severity, description, zipcode });
 
 
-        await Profile.findByIdAndUpdate(context.user._id, { $push: { emergencies: emergency } });
+        await User.findByIdAndUpdate(context.user._id, { $push: { emergencies: emergency } });
 
         return emergency;
       }
@@ -55,22 +55,22 @@ const resolvers = {
       throw AuthenticationError;
     },
     login: async (parent, { email, password }) => {
-      const profile = await Profile.findOne({ email }); console.log(profile.password);
-      if (!profile) {
-        throw new AuthenticationError('No profile with this email found!');
+      const user = await User.findOne({ email }); console.log(user.password);
+      if (!user) {
+        throw new AuthenticationError('No user with this email found!');
       }
       console.log('this is inside of the resolvers.')
-      const correctPw = await profile.isCorrectPassword(password);
+      const correctPw = await user.isCorrectPassword(password);
       console.log(correctPw);
       if (!correctPw) {
         throw AuthenticationError;
       }
 
-      const token = signToken(profile);
-      return { token, profile };
+      const token = signToken(user);
+      return { token, user };
     },
-    removeProfile: async (parent, { profileId }) => {
-      return Profile.findOneAndDelete({ _id: profileId });
+    removeUser: async (parent, { userId }) => {
+      return User.findOneAndDelete({ _id: userId });
     },
   },
 };

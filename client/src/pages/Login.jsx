@@ -5,16 +5,8 @@ import { LOGIN_USER } from '../utils/mutations';
 
 import Auth from '../utils/auth';
 
-// const styles = {
-//     loginPadding: {
-//         marginTop: '50px',
-//         marginBottom: '50px',
-//         padding: '5px',
-//     },
 
-// };
-
-const LoginForm = (props) => {
+const Login = (props) => {
     const [formState, setFormState] = useState({ email: '', password: '' });
     const [login, { error, data }] = useMutation(LOGIN_USER);
 
@@ -123,4 +115,4 @@ const LoginForm = (props) => {
     );
 };
 
-export default LoginForm;
+export default Login;

@@ -34,21 +34,10 @@ userSchema.pre('save', async function (next) {
 
 // compare the incoming password with the hashed password
 userSchema.methods.isCorrectPassword = async function (password) {
-    console.log(typeof password);
-    console.log('this is inside the iscorrectPW method')
-    console.log(typeof this.password);
-    console.log(password === this.password);
     return await bcrypt.compare(password, this.password);
-
-    // if (password === this.password) {
-    //     return true;
-    // } else {
-    //     return false;
-    // }
-
 };
 
 
-const Profile = model('Profile', userSchema);
+const User = model('User', userSchema);
 
-module.exports = Profile;
+module.exports = User;

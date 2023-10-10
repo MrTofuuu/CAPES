@@ -1,9 +1,9 @@
-import { validateEmail } from "../utils/helpers";
-import { ADD_EMERGENCY } from '../utils/mutations'
+import { validateEmail } from "../../utils/helpers";
+import { ADD_EMERGENCY } from '../../utils/mutations'
 import { useMutation } from '@apollo/client';
 import { HashLink as HLink } from "react-router-hash-link";
 import React, { useState } from "react";
-import Auth from '../utils/auth';
+import Auth from '../../utils/auth';
 import { parse } from "graphql";
 
 

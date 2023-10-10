@@ -1,5 +1,5 @@
 const Hero = require('./Hero');
-const Profile = require('./Profile');
+const User = require('./User');
 const Emergency = require('./Emergency');
 
-module.exports = { Hero, Profile, Emergency };
+module.exports = { Hero, User, Emergency };

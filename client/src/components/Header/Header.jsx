@@ -1,6 +1,6 @@
 import React from "react";
-import logoWhite from "../assets/img/logo-white.png";
-import auth from "../utils/auth";
+import logoWhite from "../../assets/img/logo-white.png";
+import auth from "../../utils/auth";
 
 function Header() {
 

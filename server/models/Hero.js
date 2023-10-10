@@ -16,6 +16,7 @@ const heroSchema = new Schema({
     type: String,
     required: true
   }
+  // TODO: Need to add a featured flag or something similar 
 });
 
 const Hero = model('Hero', heroSchema);

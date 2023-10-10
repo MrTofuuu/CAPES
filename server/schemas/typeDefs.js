@@ -8,7 +8,7 @@ const typeDefs = `
     image: String!
   }
 
-  type Profile {
+  type User {
     _id: ID
     name: String
     email: String
@@ -26,24 +26,24 @@ const typeDefs = `
 
   type Auth {
     token: ID!
-    profile: Profile
+    user: User
   }
 
   type Query {
     hero: [Hero]
     heroes(severity: Int): [Hero]
-    profiles: Profile
-    profile(profileId: ID!): Profile
+    users: User
+    user(userId: ID!): User
     emergency:[Emergency]
     emergencies: Emergency
     emergencyLevel(severity: Int): Emergency
   }
 
   type Mutation {
-    addProfile(name: String!, email: String!, password: String!): Auth
+    addUser(name: String!, email: String!, password: String!): Auth
     addEmergency(severity: Int!, description: String!, zipcode: Int!): Emergency
     login(email: String!, password: String!): Auth
-    removeProfile(profileId: ID!): Profile
+    removeUser(userId: ID!): User
   }
 `;
 

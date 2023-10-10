@@ -17,7 +17,7 @@ import service4 from "../assets/img/Features-MuchMore.jpg";
 // import hero4 from "../assets/img/heroes/CaptainAmerica.jpg";
 
 const Home = () => {
-
+    // TODO: This needs to be refactored, it should go in the data base
   let featuredHeroes = [
     {
       heroImage: "../assets/heroes/BlackPanther.jpg",
@@ -154,22 +154,22 @@ const Home = () => {
           {/* start: row */}
           <div className="row">
 
-          {featuredHeroes.map((card) => (
-            <>
-              <div className="col-lg-3 mx-auto" key={card.heroName}>
-                <div className="card capesCard">
-                  <img
-                    src={card.heroImage}
-                    className="card-img-top"
-                    alt={card.altTag} />
-                  <div className="card-body">
-                    <h4>{card.heroName}</h4>
-                    <p className="card-text">{card.heroDescription}</p>
+            {featuredHeroes.map((card) => (
+              <>
+                <div className="col-lg-3 mx-auto" key={card.heroName}>
+                  <div className="card capesCard">
+                    <img
+                      src={card.heroImage}
+                      className="card-img-top"
+                      alt={card.altTag} />
+                    <div className="card-body">
+                      <h4>{card.heroName}</h4>
+                      <p className="card-text">{card.heroDescription}</p>
+                    </div>
                   </div>
                 </div>
-              </div>
               </>
-          ))}
+            ))}
 
             {/* FEATURE 1 */}
             {/* <div className="col-lg-3 mx-auto">
