@@ -156,7 +156,7 @@ const Home = () => {
 
           {featuredHeroes.map((card) => (
             <>
-              <div className="col-lg-3 mx-auto">
+              <div className="col-lg-3 mx-auto" key={card.heroName}>
                 <div className="card capesCard">
                   <img
                     src={card.heroImage}
