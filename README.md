@@ -36,7 +36,7 @@ This project was built using the MERN stack by the proud team members listed in 
 - [Misty Whitenton](https://github.com/mistwhit)
 
 ## Usage
-- This application can be viewed publicly from our Heroku hosted link, or... to run the app in the command line, go to the project's root directory and run `npm i && npm run seed && npm run develop` 
+- This application can be viewed publicly from our Heroku hosted link, or... to run the app in the command line, go to the project's root directory and run `pnpm i && pnpm run seed && pnpm run develop` 
 - The application is then viewable from your browswer via `http://localhost:3001`
 
 ## User-Story
@@ -58,6 +58,7 @@ This project is created using the following packages
 - [React.js](https://reactjs.org/)
 - [Node.JS](https://nodejs.org/en/)
 
+- [PNPM](https://pnpm.io/)
 - [Apollo Express Server](https://www.npmjs.com/package/apollo-server-express)
 - [Mongoose](https://mongoosejs.com/docs/)
 - [React Bootstrap](https://react-bootstrap.github.io/)
@@ -70,7 +71,6 @@ This project is created using the following packages
 ## Libraries
 This project is created using the following libraries
 
-<!-- Do we still need this license section?  -->
 
 ## Licensing
 The project is made possible with the following licensing:
