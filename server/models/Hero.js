@@ -16,6 +16,9 @@ const heroSchema = new Schema({
     type: String,
     required: true
   },
+  altTag: {
+    type:String
+  },
   featured:{
     type:Boolean
   }

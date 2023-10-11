@@ -2,9 +2,9 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { useQuery } from '@apollo/client'
 import { QUERY_HEROES } from "../utils/queries";
-
+import HeroCard from "../components/HeroCard/HeroCard";
 const Heroes = () => {
-
+  
   // Create state variables for the fields in the hero submission form
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
@@ -25,31 +25,17 @@ const Heroes = () => {
   const handleChange = (e) => {
     // FIXME: this needs to be refactored to use form state
     const { firstName, lastName, alias, phone, email, description } = e.target;
-    const inputType = target.name;
-    const inputValue = target.value;
+    
+    setFormState({
+      ...formState,
+      [name]:value,
+    })
 
-    // Based on the input type, we set the state of the following ...
-    if (inputType === "firstName") {
-      setFirstName(inputValue);
-    }
-    else if (inputType === "lastName") {
-      setLastName(inputValue);
-    }
-    else if (inputType === "alias") {
-      setAlias(inputValue);
-    }
-    else if (inputType === "phone") {
-      setPhone(inputValue);
-    }
-    else if (inputType === "email") {
-      setEmail(inputValue);
-    } else if (inputType === "description") {
-      setDescription(inputValue);
-    } 
+   
   };
   
   const { loading, error, data } = useQuery(QUERY_HEROES)
-    
+    console.log(data)
   if (loading) return <p>Loading...</p>;
   if (error) return <p>Error :(</p>;
 
@@ -80,6 +66,7 @@ const Heroes = () => {
         <h1 className="display-5 fw-bold redText">All C.A.P.E.S. Heroes</h1>
         {/* start: row */}
         <div className="row">
+          {<HeroCard heroes={data.hero}/>}
           {/* ALL HEROES OBJECT LOOP */}
           {data?.hero?.map((card) => (
             <>
@@ -131,7 +118,7 @@ const Heroes = () => {
                         type="text"
                         className="form-control"
                         placeholder="Enter Your First Name"
-                        onChange={handleInputChange}
+                        onChange={handleChange}
                       />
                     </div>
                     {/* LAST NAME */}
@@ -143,7 +130,7 @@ const Heroes = () => {
                         type="text"
                         className="form-control"
                         placeholder="Enter Your Last Name"
-                        onChange={handleInputChange}
+                        onChange={handleChange}
                       />
                     </div>
                     {/* ALIAS */}
@@ -155,7 +142,7 @@ const Heroes = () => {
                         type="text"
                         className="form-control"
                         placeholder="i.e. Spiderman"
-                        onChange={handleInputChange}
+                        onChange={handleChange}
                       />
                     </div>
                     {/* PHONE */}
@@ -167,7 +154,7 @@ const Heroes = () => {
                         type="text"
                         className="form-control"
                         placeholder="000-123-4567"
-                        onChange={handleInputChange}
+                        onChange={handleChange}
                       />
                     </div>
                     {/* EMAIL */}
@@ -179,7 +166,7 @@ const Heroes = () => {
                         type="email"
                         className="form-control"
                         placeholder="name@example.com"
-                        onChange={handleInputChange}
+                        onChange={handleChange}
                       />
                     </div>
                     {/* DESCRIPTION */}
@@ -193,7 +180,7 @@ const Heroes = () => {
                         type="text"
                         className="form-control"
                         placeholder="Describe your super abilities in as much detail as possible"
-                        onChange={handleInputChange}
+                        onChange={handleChange}
                         rows="3"
                       />
                     </div>

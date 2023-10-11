@@ -2,7 +2,8 @@ import React, { useState } from "react";
 import { useQuery } from '@apollo/client'
 import { HashLink as HLink } from "react-router-hash-link";
 import auth from "../utils/auth";
-import HeroCard from '../components/HeroCard/HeroCard'
+import HeroCard from '../components/HeroCard/HeroCard';
+import HeroList from '../components/HeroList/HeroList';
 import { GET_FEATURED_HEROES } from '../utils/queries';
 // Here we import service images to reduce potential path issues
 import service1 from "../assets/img/Features-Fire.jpg";
@@ -20,8 +21,8 @@ import spinner from "../assets/spinner.gif"
 const Home = () => {
   // using a query to get all the featured heroes to be rendered 
   const { loading, data } = useQuery(GET_FEATURED_HEROES)
-  console.log(loading)
-  console.log(data);
+  // console.log(loading)
+  // console.log(data);
 
   // const featuredHeroesData = data.featuredHeroes;
   // console.log(typeof(featuredHeroesData))
@@ -156,95 +157,7 @@ const Home = () => {
       </>
 
       <>
-        {/* OUR FEATURED HEROES */}
-        <div className="px-4 text-center">
-          <h1 className="display-5 fw-bold redText">Our Featured Heroes</h1>
-          {/* start: row */}
-          <div className="row">
-            {/* FIXME: this needs to use the data from the query, but loading seems to blow it up */}
-            {/* {featuredHeroes.map((card, index) => (
-              <HeroCard
-                key={index}
-                name={card.heroName}
-                altTag={card.altTag}
-                image={card.heroImage}
-                description={card.heroDescription}
-
-              />
-
-
-            ))} */}
-
-  
-            {loading ? <img src={spinner} alt="loading" /> : data.featuredHeroes.map((hero, index) => (
-              <HeroCard 
-                key={hero._id}
-                id={hero._id}
-                name={hero.name}
-
-                image={hero.image}
-                description={hero.description}
-
-              />
-
-
-            ))}
-            {/* FEATURE 1 */}
-            {/* <div className="col-lg-3 mx-auto">
-              <div className="card">
-                <img src={hero1} className="card-img-top" alt="..." />
-                <div className="card-body">
-                  <h4>Hero</h4>
-                  <p className="card-text">
-                    This is dummy text intended to fill out the card's content.
-                  </p>
-                </div>
-              </div>
-            </div> */}
-
-            {/* FEATURE 2 */}
-            {/* <div className="col-lg-3 mx-auto">
-              <div className="card">
-                <img src={hero2} className="card-img-top" alt="..." />
-                <div className="card-body">
-                  <h4>Hero</h4>
-                  <p className="card-text">
-                    This is dummy text intended to fill out the card's content.
-                  </p>
-                </div>
-              </div>
-            </div> */}
-
-            {/* FEATURE 3 */}
-            {/* <div className="col-lg-3 mx-auto">
-              <div className="card">
-                <img src={hero3} className="card-img-top" alt="..." />
-                <div className="card-body">
-                  <h4>Hero</h4>
-                  <p className="card-text">
-                    This is dummy text intended to fill out the card's content.
-                  </p>
-                </div>
-              </div>
-            </div> */}
-
-            {/* FEATURE 4 */}
-            {/* <div className="col-lg-3 mx-auto">
-              <div className="card">
-                <img src={hero4} className="card-img-top" alt="..." />
-                <div className="card-body">
-                  <h4>Hero</h4>
-                  <p className="card-text">
-                    This is dummy text intended to fill out the card's content.
-                  </p>
-                </div>
-              </div>
-            </div> */}
-
-          </div>
-          {/* end: row */}
-        </div>
-        {/* end: our services */}
+        {loading ? <img src={spinner} alt="loading" /> : <HeroList heroes={data.featuredHeroes} />}
       </>
       <br />
     </>
