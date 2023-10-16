@@ -23,7 +23,7 @@ function HeroList({heroes}) {
           ))} */}
 
 
-          {featuredHeroes.map((hero, index) => (
+          {heroes.map((hero, index) => (
             <HeroCard 
               key={hero._id}
               id={hero._id}
