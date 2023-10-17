@@ -3,7 +3,8 @@ import { Link } from "react-router-dom";
 import { useQuery } from '@apollo/client'
 import { QUERY_HEROES } from "../utils/queries";
 import HeroCard from "../components/HeroCard/HeroCard";
-const Heroes = () => {
+import HeroList from "../components/HeroList/HeroList"
+const Heroes = async () => {
   
   // Create state variables for the fields in the hero submission form
   const [firstName, setFirstName] = useState("");
@@ -33,7 +34,7 @@ const Heroes = () => {
 
    
   };
-  
+  console.log('before query heroes')
   const { loading, error, data } = useQuery(QUERY_HEROES)
     console.log(data)
   if (loading) return <p>Loading...</p>;
@@ -65,10 +66,11 @@ const Heroes = () => {
       <div className="px-4 py-5 my-5 text-center">
         <h1 className="display-5 fw-bold redText">All C.A.P.E.S. Heroes</h1>
         {/* start: row */}
-        <div className="row">
-          {<HeroCard heroes={data.hero}/>}
+        {loading ? <img src={spinner} alt="loading" /> : <HeroList heroes={data.featuredHeroes} />}
+        {/* <div className="row"> */}
+          {/* {<HeroCard heroes={data.hero}/>} */}
           {/* ALL HEROES OBJECT LOOP */}
-          {data?.hero?.map((card) => (
+          {/* {data?.hero?.map((card) => (
             <>
               <div className="col-lg-3 mx-auto">
                 <div className="card capesCard">
@@ -83,8 +85,8 @@ const Heroes = () => {
                 </div>
               </div>
             </>
-          ))}
-        </div>
+          ))} */}
+        {/* </div> */}
         {/* end: row */}
       </div>
       {/* end: all capes heroes */}

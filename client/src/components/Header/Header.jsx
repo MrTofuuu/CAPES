@@ -15,7 +15,7 @@ function Header() {
             </li>
             {/* <!-- OUR HEROS --> */}
             <li className="nav-item capesNavLink">
-              <a className="nav-link" href="/ourheroes"><i className="fas fa-user-circle"></i> Our Heroes</a>
+              <a className="nav-link" href="/heroes"><i className="fas fa-user-circle"></i> Our Heroes</a>
             </li>
             {/* <!-- LOGOUT --> */}
             <li className="nav-item capesNavLink">
