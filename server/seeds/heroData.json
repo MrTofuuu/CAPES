@@ -3,50 +3,50 @@
     "name": "Chris's Dad",
     "severity":"1",
     "description": "Can out-drink everyone around him, and if you get him drunk enough, he'll jump a fence just to prove he can do it.",
-    "image":"../assets/heroes/ChrisDad.png",
+    "image":"https://i.imgur.com/38PZiwc.png",
     "featured":true
   },
   {
     "name": "Candra's Dad",
     "severity":"1",
     "description": "Always knows a guy who knows a guy, and is a never-ending supply of sarcasm and famous Desoto, TX BBQ.",
-    "image":"../assets/heroes/CandrasDad.png"
+    "image":"https://i.imgur.com/bAzQdh8.png"
   },
   {
     "name": "Misty's Dad",
     "severity":"1",
     "description": "Ultimate gardener; can fix up your fickle fiddle-leaf fig or get your begonias back to blooming in no time.",
-    "image":"../assets/heroes/MistysDad.png"
+    "image":"https://i.imgur.com/ScVytB9.png"
   },
   {
     "name": "Konner's Dad",
     "severity":"1",
     "description": "The neighborhood's favorite handy-man, can hold his alcohol like he can hold his screws...and he NEVER drops a screw.",
-    "image":"../assets/heroes/KonnersDad.jpg"
+    "image":"https://i.imgur.com/CvMlJUR.jpg"
   },
   {
     "name": "Bonnie's Dad",
     "severity":"1",
     "description": "Super-human ability to predict the weather before it strikes.",
-    "image":"../assets/heroes/BonniesDad.png"
+    "image":"https://i.imgur.com/D5fS32a.png"
   },
   {
     "name": "The Tick",
     "severity":"2",
     "description": "Super strength, nigh invulnerability, will probably steal your girl.",
-    "image":"../assets/heroes/Tick.png"
+    "image":"https://i.imgur.com/s7k592B.png"
   },
   {
     "name": "Black Widow",
     "severity":"2",
     "description": "Master spy & assassin, martial artist, armed combatant; skills in espionage, infiltration, disguise and deception, manipulation & hacking.",
-    "image":"../assets/heroes/BlackWidow.jpg"
+    "image":"https://i.imgur.com/ltlStCD.jpg"
   },
   {
     "name": "Hawkeye",
     "severity":"2",
     "description": "Marksmanship, assassin, marital artist, knife & sword master and expert pilot.",
-    "image":"../assets/heroes/Hawkeye.jpg"
+    "image":"https://i.imgur.com/R8QPxvw.jpg"
   },
   {
     "name": "Ant Man",
@@ -112,7 +112,7 @@
     "name": "Captain America",
     "severity":"4",
     "description": "Strength, agility, stamina, healing ability, expert tactician, martial artist, indestructible shield.",
-    "image":"../assets/heroes/CaptainAmerica.jpg",
+    "image":"https://i.imgur.com/XibU8RD.jpg",
     "featured":true
   },
   {
@@ -143,7 +143,7 @@
     "name": "Black Panther",
     "severity":"5",
     "description": "Enhanced senses, superhuman condition, speed, martial artist, magical resistance, Vibranium-assisted outfit.",
-    "image":"../assets/heroes/BlackPanther.jpg",
+    "image":"https://i.imgur.com/WNZQgcB.jpg",
     "featured":true
   },
   {
@@ -162,7 +162,7 @@
     "name": "Batman",
     "severity":"5",
     "description": "Genius-level intelligence, master detective, master martial artist, access to high tech equipment.",
-    "image":"../assets/heroes/Batman_2.png",
+    "image":"https://i.imgur.com/7aQi6FS.png",
     "featured":true
   },
   {
