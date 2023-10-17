@@ -52,61 +52,61 @@
     "name": "Ant Man",
     "severity":"2",
     "description": "Genius-level intellect, size-changing via Pym Particles, telepathic communication with insects, dimension-hopping.",
-    "image":"../assets/heroes/Antman.jpg"
+    "image":"https://i.imgur.com/38PZiwc.png"
   },
   {
     "name": "Winter Soldier",
     "severity":"2",
     "description": "Energy blasts, superhuman strength, martial artist, speed, healing, stamina.",
-    "image":"../assets/heroes/WinterSoldier.jpg"
+    "image":"https://i.imgur.com/38PZiwc.png"
   },
   {
     "name": "Jessica Jones",
     "severity":"2",
     "description": "Superhuman strength, flight, immunity to mind control.",
-    "image":"../assets/heroes/JessicaJones.jpg"
+    "image":"https://i.imgur.com/38PZiwc.png"
   },
   {
     "name": "Loki",
     "severity":"3",
     "description": "Strength, stamina, speed, genius, mastery of magic and illusion, energy projection, shapeshifting.",
-    "image":"../assets/heroes/Loki.jpg"
+    "image":"https://i.imgur.com/38PZiwc.png"
   },
   {
     "name": "Star Lord",
     "severity":"3",
     "description": "Strength, flight via jet boots, master problem-solver, cybernetic enhancements, space travel, Element Gun that projects air, earth, fire, water.",
-    "image":"../assets/heroes/Starlord.jpg"
+    "image":"https://i.imgur.com/bAzQdh8.png"
   },
   {
     "name": "Gamora",
     "severity":"3",
     "description": "Acrobatics, martial artist, marksmanship, regenerative healing powers, infinity cloak",
-    "image":"../assets/heroes/Gamora.jpg"
+    "image":"https://i.imgur.com/bAzQdh8.png"
   },
   {
     "name": "Storm",
     "severity":"3",
     "description": "Power over the weather, skilled thief, excellent with handguns and knives, ability to see in darkness.",
-    "image":"../assets/heroes/Storm.jpg"
+    "image":"https://i.imgur.com/bAzQdh8.png"
   },
   {
     "name": "Dr. Strange",
     "severity":"3",
     "description": "Flight via his Cloak of Levitation, martial artist, wind & flame projection, telekinesis, hypnotism, ability to jump through dimensions.",
-    "image":"../assets/heroes/drStrange.jpg"
+    "image":"https://i.imgur.com/XibU8RD.jpg"
   },
   {
     "name": "Wolverine",
     "severity":"3",
     "description": "Reflexes, agility, senses, retractable adamantium-plated bone claws, regeneration, indestructible skeleton.",
-    "image":"../assets/heroes/wolverine.jpg"
+    "image":"https://i.imgur.com/XibU8RD.jpg"
   },
   {
     "name": "Iron Man",
     "severity":"4",
     "description": "Genius-level intellect, multiple powered armor suits, ability to fly.",
-    "image":"../assets/heroes/Ironman.jpg"
+    "image":"https://i.imgur.com/XibU8RD.jpg"
   },
   {
     "name": "Captain America",
@@ -119,25 +119,25 @@
     "name": "Spider-Man",
     "severity":"4",
     "description": "Strength, jumping, leaping, speed, “danger sense” precognition, custom web-shooters.",
-    "image":"../assets/heroes/spiderman.jpg"
+    "image":"https://i.imgur.com/XibU8RD.jpg"
   },
   {
     "name": "Vision",
     "severity":"4",
     "description": "Superhuman strength & durability; density manipulation, flight, energy blasts, synthetic material generation, mental & computer interaction, genius-level intellect & master combatant.",
-    "image":"../assets/heroes/Vision.jpg"
+    "image":"https://i.imgur.com/WNZQgcB.jpg"
   },
   {
     "name": "Dr. Manhattan",
     "severity":"4",
     "description": "Time travel, disintegration, replication, colossal growth, teleportation, space travel, ",
-    "image":"../assets/heroes/drManhattan.jpg"
+    "image":"https://i.imgur.com/WNZQgcB.jpg"
   },
   {
     "name": "Scarlet Witch",
     "severity":"5",
     "description": "Telekinesis, telepathy, teleportation, flight, manipulation of reality, time, fire, weather and energy.",
-    "image":"../assets/heroes/ScarletWitch.jpg"
+    "image":"https://i.imgur.com/WNZQgcB.jpg"
   },
   {
     "name": "Black Panther",
@@ -150,13 +150,13 @@
     "name": "Hulk",
     "severity":"5",
     "description": "Strength, speed, stamina, durability, regeneration, nigh invulnerability, breathing underwater.",
-    "image":"../assets/heroes/Hulk.jpg"
+    "image":"https://i.imgur.com/7aQi6FS.png"
   },
   {
     "name": "Captian Marvel",
     "severity":"5",
     "description": "Strength, speed, stamina, resistant to most toxins, energy absorption and manipulation.",
-    "image":"../assets/heroes/CaptainMarvel.jpg"
+    "image":".https://i.imgur.com/7aQi6FS.png"
   },
   {
     "name": "Batman",
@@ -169,6 +169,6 @@
     "name": "Thor",
     "severity":"5",
     "description": "Strength, speed, stamina, durability, weather manipulation, flight (via Mjolnir), dense skin and bones with a resistance to injury.",
-    "image":"../assets/heroes/Thor_2.png"
+    "image":"https://i.imgur.com/7aQi6FS.png"
   }
 ]
