@@ -37,6 +37,7 @@ const Heroes = async () => {
   console.log('before query heroes')
   const { loading, error, data } = useQuery(QUERY_HEROES)
     console.log(data)
+    const heroes = data || [];
   if (loading) return <p>Loading...</p>;
   if (error) return <p>Error :(</p>;
 
@@ -66,7 +67,7 @@ const Heroes = async () => {
       <div className="px-4 py-5 my-5 text-center">
         <h1 className="display-5 fw-bold redText">All C.A.P.E.S. Heroes</h1>
         {/* start: row */}
-        {loading ? <img src={spinner} alt="loading" /> : <HeroList heroes={data.featuredHeroes} />}
+        {loading ? <img src={spinner} alt="loading" /> : <HeroCard heroes={heroes.featuredHeroes} />}
         {/* <div className="row"> */}
           {/* {<HeroCard heroes={data.hero}/>} */}
           {/* ALL HEROES OBJECT LOOP */}

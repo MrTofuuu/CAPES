@@ -1,6 +1,6 @@
 import React from 'react';
 // IMPORT ROUTER 
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+// import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import { ApolloClient, ApolloProvider, InMemoryCache, createHttpLink } from '@apollo/client';
 import { setContext } from '@apollo/client/link/context';
 // IMPORT PAGES
@@ -41,31 +41,11 @@ function App() {
   return (
     <ApolloProvider client={client}>
 
-      <Router>
+     
         <Header />
-        <Switch>
-          <Route exact path="/">
-            <Home />
-          </Route>
-          <Route exact path="/heroes">
-            <Heroes />
-          </Route>
-          <Route exact path="/profile">
-            <EmergencyForm />
-            <Profile />
-          </Route>
-          <Route exact path="/login">
-            <Login />
-            </Route>
-          <Route exact path="/signup">
-            <SignupForm />
-          </Route>
-          <Route>
-            <NotFound />
-          </Route>
-        </Switch>
+        
         <Footer />
-      </Router>
+     
     </ApolloProvider>
   );
 }

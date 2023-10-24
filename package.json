@@ -31,7 +31,7 @@
     "jsonwebtoken": "^8.5.1",
     "jwt-decode": "^3.1.2",
     "react-bootstrap": "^2.1.1",
-    "react-icons": "^4.3.1",
+    "react-icons": "^4.11.0",
     "stripe": "^8.200.0"
   },
   "engines":{"node":"20.x"}
